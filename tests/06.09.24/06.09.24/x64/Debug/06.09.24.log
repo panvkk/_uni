@@ -1,0 +1,3 @@
+﻿  factorialsdfsdf.cpp
+factorialsdfsdf.obj : error LNK2005: main already defined in 06.09.24.obj
+D:\Visual Studio\projects\06.09.24\x64\Debug\06.09.24.exe : fatal error LNK1169: one or more multiply defined symbols found
