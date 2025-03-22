@@ -1,0 +1,20 @@
+﻿  asm5.cpp
+D:\_uni\assembly\practice\asm5\asm5.cpp(24,2): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+D:\_uni\assembly\practice\asm5\asm5.cpp(25,3): error C2065: 'mov': undeclared identifier
+D:\_uni\assembly\practice\asm5\asm5.cpp(25,7): error C2146: syntax error: missing ';' before identifier 'eax'
+D:\_uni\assembly\practice\asm5\asm5.cpp(25,7): error C2065: 'eax': undeclared identifier
+D:\_uni\assembly\practice\asm5\asm5.cpp(26,3): error C2146: syntax error: missing ';' before identifier 'mov'
+D:\_uni\assembly\practice\asm5\asm5.cpp(26,3): error C2065: 'mov': undeclared identifier
+D:\_uni\assembly\practice\asm5\asm5.cpp(26,7): error C2146: syntax error: missing ';' before identifier 'esi'
+D:\_uni\assembly\practice\asm5\asm5.cpp(26,7): error C2065: 'esi': undeclared identifier
+D:\_uni\assembly\practice\asm5\asm5.cpp(27,3): error C2146: syntax error: missing ';' before identifier 'mov'
+D:\_uni\assembly\practice\asm5\asm5.cpp(27,3): error C2065: 'mov': undeclared identifier
+D:\_uni\assembly\practice\asm5\asm5.cpp(27,7): error C2146: syntax error: missing ';' before identifier 'ecx'
+D:\_uni\assembly\practice\asm5\asm5.cpp(27,7): error C2065: 'ecx': undeclared identifier
+D:\_uni\assembly\practice\asm5\asm5.cpp(29,3): error C2146: syntax error: missing ';' before identifier 'cicle'
+D:\_uni\assembly\practice\asm5\asm5.cpp(30,3): error C2065: 'add': undeclared identifier
+D:\_uni\assembly\practice\asm5\asm5.cpp(30,7): error C2146: syntax error: missing ';' before identifier 'eax'
+D:\_uni\assembly\practice\asm5\asm5.cpp(30,7): error C2065: 'eax': undeclared identifier
+D:\_uni\assembly\practice\asm5\asm5.cpp(30,19): error C2760: syntax error: '+' was unexpected here; expected ','
+D:\_uni\assembly\practice\asm5\asm5.cpp(30,21): error C2065: 'esi': undeclared identifier
+D:\_uni\assembly\practice\asm5\asm5.cpp(30,24): error C2059: syntax error: ']'

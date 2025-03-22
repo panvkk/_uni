@@ -1,0 +1,4 @@
+﻿  asm3.cpp
+D:\_uni\assembly\practice\asm3\asm3.cpp(37,15): warning C4101: 'max': unreferenced local variable
+D:\_uni\assembly\practice\asm3\asm3.cpp(37,12): warning C4101: 'c': unreferenced local variable
+  asm3.vcxproj -> D:\_uni\assembly\practice\asm3\Debug\asm3.exe

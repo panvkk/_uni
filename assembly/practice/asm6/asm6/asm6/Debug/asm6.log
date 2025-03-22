@@ -1,0 +1,4 @@
+﻿  asm6.cpp
+D:\_uni\assembly\practice\asm6\asm6\asm6.cpp(11,15): warning C4101: 'counter': unreferenced local variable
+D:\_uni\assembly\practice\asm6\asm6\asm6.cpp(11,9): warning C4101: 'rest': unreferenced local variable
+  asm6.vcxproj -> D:\_uni\assembly\practice\asm6\asm6\Debug\asm6.exe

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\_uni\\assembly\\practice\\asm4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6FAAA3E7-81F2-4E76-A9D9-C212945D6C38}|asm4.vcxproj|D:\\_uni\\assembly\\practice\\asm4\\asm4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6FAAA3E7-81F2-4E76-A9D9-C212945D6C38}|asm4.vcxproj|solutionrelative:asm4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "asm4.cpp",
+              "DocumentMoniker": "D:\\_uni\\assembly\\practice\\asm4\\asm4.cpp",
+              "RelativeDocumentMoniker": "asm4.cpp",
+              "ToolTip": "D:\\_uni\\assembly\\practice\\asm4\\asm4.cpp",
+              "RelativeToolTip": "asm4.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-07T06:48:58.312Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

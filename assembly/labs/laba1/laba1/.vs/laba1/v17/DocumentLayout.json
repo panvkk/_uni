@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\_uni\\assembly\\labs\\laba1\\laba1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{60700331-F827-4B6E-836A-5791AE81B9FE}|laba1.vcxproj|D:\\_uni\\assembly\\labs\\laba1\\laba1\\function.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{60700331-F827-4B6E-836A-5791AE81B9FE}|laba1.vcxproj|solutionrelative:function.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60700331-F827-4B6E-836A-5791AE81B9FE}|laba1.vcxproj|D:\\_uni\\assembly\\labs\\laba1\\laba1\\laba1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{60700331-F827-4B6E-836A-5791AE81B9FE}|laba1.vcxproj|solutionrelative:laba1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "function.asm",
+              "DocumentMoniker": "D:\\_uni\\assembly\\labs\\laba1\\laba1\\function.asm",
+              "RelativeDocumentMoniker": "function.asm",
+              "ToolTip": "D:\\_uni\\assembly\\labs\\laba1\\laba1\\function.asm",
+              "RelativeToolTip": "function.asm",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-22T10:20:29.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "laba1.cpp",
+              "DocumentMoniker": "D:\\_uni\\assembly\\labs\\laba1\\laba1\\laba1.cpp",
+              "RelativeDocumentMoniker": "laba1.cpp",
+              "ToolTip": "D:\\_uni\\assembly\\labs\\laba1\\laba1\\laba1.cpp",
+              "RelativeToolTip": "laba1.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-22T10:17:48.216Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
