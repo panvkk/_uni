@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\_uni\\assembly\\tests\\test1\\assembly_test_1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19C15898-B8F3-4870-AD84-CE2975B31990}|assembly_test_1.vcxproj|D:\\_uni\\assembly\\tests\\test1\\assembly_test_1\\assembly_test_1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{19C15898-B8F3-4870-AD84-CE2975B31990}|assembly_test_1.vcxproj|solutionrelative:assembly_test_1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "assembly_test_1.cpp",
+              "DocumentMoniker": "D:\\_uni\\assembly\\tests\\test1\\assembly_test_1\\assembly_test_1.cpp",
+              "RelativeDocumentMoniker": "assembly_test_1.cpp",
+              "ToolTip": "D:\\_uni\\assembly\\tests\\test1\\assembly_test_1\\assembly_test_1.cpp",
+              "RelativeToolTip": "assembly_test_1.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-04T06:45:37.385Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

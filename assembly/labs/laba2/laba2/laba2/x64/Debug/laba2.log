@@ -1,0 +1,13 @@
+﻿  Assembling fun.asm...
+fun.asm(5): error A2070: invalid instruction operands
+fun.asm(7): error A2070: invalid instruction operands
+fun.asm(8): error A2070: invalid instruction operands
+fun.asm(9): error A2070: invalid instruction operands
+fun.asm(52): error A2070: invalid instruction operands
+fun.asm(53): error A2070: invalid instruction operands
+fun.asm(54): error A2070: invalid instruction operands
+fun.asm(56): error A2070: invalid instruction operands
+fun.asm(58): error A2088: END directive required at end of file
+fun.asm(46): error A2009: syntax error in expression
+fun.asm(50): error A2009: syntax error in expression
+D:\programs\Microsoft Visual Studio 2022\program\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: The command "ml64.exe /c /nologo /Zi /Fo"laba2\x64\Debug\fun.obj" /W3 /errorReport:prompt  /Tafun.asm" exited with code 1.

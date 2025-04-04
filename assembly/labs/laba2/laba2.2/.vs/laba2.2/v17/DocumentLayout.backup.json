@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\_uni\\assembly\\labs\\laba2\\laba2.2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B1DCC068-8528-4255-A774-CC3684799C46}|laba2.2.vcxproj|D:\\_uni\\assembly\\labs\\laba2\\laba2.2\\convertHexToFixed.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B1DCC068-8528-4255-A774-CC3684799C46}|laba2.2.vcxproj|solutionrelative:convertHexToFixed.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1DCC068-8528-4255-A774-CC3684799C46}|laba2.2.vcxproj|D:\\_uni\\assembly\\labs\\laba2\\laba2.2\\laba2.2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B1DCC068-8528-4255-A774-CC3684799C46}|laba2.2.vcxproj|solutionrelative:laba2.2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "convertHexToFixed.asm",
+              "DocumentMoniker": "D:\\_uni\\assembly\\labs\\laba2\\laba2.2\\convertHexToFixed.asm",
+              "RelativeDocumentMoniker": "convertHexToFixed.asm",
+              "ToolTip": "D:\\_uni\\assembly\\labs\\laba2\\laba2.2\\convertHexToFixed.asm",
+              "RelativeToolTip": "convertHexToFixed.asm",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-29T13:58:53.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "laba2.2.cpp",
+              "DocumentMoniker": "D:\\_uni\\assembly\\labs\\laba2\\laba2.2\\laba2.2.cpp",
+              "RelativeDocumentMoniker": "laba2.2.cpp",
+              "ToolTip": "D:\\_uni\\assembly\\labs\\laba2\\laba2.2\\laba2.2.cpp",
+              "RelativeToolTip": "laba2.2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-29T13:58:09.577Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+﻿  Assembling convertHexToFixed.asm...
+  laba2.2.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 43 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  laba2.2.vcxproj -> D:\_uni\assembly\labs\laba2\laba2.2\Release\laba2.2.exe
