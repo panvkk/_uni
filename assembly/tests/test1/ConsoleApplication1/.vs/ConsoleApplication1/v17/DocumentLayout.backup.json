@@ -42,8 +42,8 @@
               "Title": "test1_asm.cpp",
               "DocumentMoniker": "D:\\_uni\\assembly\\tests\\test1\\ConsoleApplication1\\test1_asm.cpp",
               "RelativeDocumentMoniker": "test1_asm.cpp",
-              "ToolTip": "D:\\_uni\\assembly\\tests\\test1\\ConsoleApplication1\\test1_asm.cpp*",
-              "RelativeToolTip": "test1_asm.cpp*",
+              "ToolTip": "D:\\_uni\\assembly\\tests\\test1\\ConsoleApplication1\\test1_asm.cpp",
+              "RelativeToolTip": "test1_asm.cpp",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-03T17:36:40.496Z",
@@ -59,7 +59,8 @@
               "RelativeToolTip": "getStatistics.asm",
               "ViewState": "AgIAAF8AAAAAAAAAAAAQwGoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-03T17:42:43.344Z"
+              "WhenOpened": "2025-04-03T17:42:43.344Z",
+              "EditorCaption": ""
             }
           ]
         }
