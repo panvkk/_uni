@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>build/Desktop_Qt_6_8_3_llvm_mingw_64_bit-Debug/debug/fireworks.mp3</file>
+    </qresource>
+</RCC>

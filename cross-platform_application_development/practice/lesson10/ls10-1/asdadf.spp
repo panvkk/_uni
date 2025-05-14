@@ -1,0 +1,82 @@
+// Переменная для записи о себе
+    struct Student self;
+    // Массив для студентов группы (максимум 10)
+    struct Student students[10];
+    
+    // ===== Ввод собственных данных с клавиатуры =====
+    printf("Введите ФИО (Фамилия Имя Отчество): ");
+    if (fgets(self.fullname, MAX_LEN, stdin) == NULL) {
+        perror("Ошибка чтения ФИО");
+        exit(EXIT_FAILURE);
+    }
+    // Удаляем символ новой строки, если он был введён
+    size_t len = strlen(self.fullname);
+    if (len > 0 && self.fullname[len - 1] == '\n')
+        self.fullname[len - 1] = '\0';
+    
+    printf("Введите место рождения: ");
+    scanf("%29s", self.currentPlace);
+    
+    printf("Введите прописку: ");
+    scanf("%29s", self.registration);
+    
+    printf("Введите год рождения: ");
+    scanf("%hd", &self.year);
+    
+    printf("Введите месяц рождения (1-12): ");
+    scanf("%hhu", &self.month);
+    
+    printf("Введите день рождения (1-31): ");
+    scanf("%hhu", &self.day);
+    
+    printf("Введите балл при поступлении (не более 400): ");
+    scanf("%hu", &self.admissionScore);
+    
+    // Очистка буфера ввода (убираем остатки после scanf)
+    int ch;
+    while ((ch = getchar()) != '\n' && ch != EOF);
+    
+    // ===== Считывание данных о студентах группы из текстового файла =====
+    std::ifstream input("Input.txt");
+    if(!input.is_open()){
+        std::cerr << "Не удалось открыть файл Input.txt" << std::endl;
+        // Если файла нет, можно считать, что записи группы отсутствуют
+    }
+    
+    int groupCount = 0; // Число успешно считанных записей
+    std::string line;
+    // Для каждой записи читаем 7 строк
+    while(groupCount < 10 && std::getline(input, line)) {
+        // Строка 1: fullname
+        strncpy(students[groupCount].fullname, line.c_str(), MAX_LEN - 1);
+        students[groupCount].fullname[MAX_LEN - 1] = '\0';
+        
+        // Строка 2: currentPlace
+        if(!std::getline(input, line)) break;
+        strncpy(students[groupCount].currentPlace, line.c_str(), 29);
+        students[groupCount].currentPlace[29] = '\0';
+        
+        // Строка 3: registration
+        if(!std::getline(input, line)) break;
+        strncpy(students[groupCount].registration, line.c_str(), 29);
+        students[groupCount].registration[29] = '\0';
+        
+        // Строка 4: год рождения
+        if(!std::getline(input, line)) break;
+        students[groupCount].year = static_cast<short int>(std::stoi(line));
+        
+        // Строка 5: месяц рождения
+        if(!std::getline(input, line)) break;
+        students[groupCount].month = static_cast<unsigned char>(std::stoi(line));
+        
+        // Строка 6: день рождения
+        if(!std::getline(input, line)) break;
+        students[groupCount].day = static_cast<unsigned char>(std::stoi(line));
+        
+        // Строка 7: балл при поступлении
+        if(!std::getline(input, line)) break;
+        students[groupCount].admissionScore = static_cast<unsigned short int>(std::stoi(line));
+        
+        groupCount++;
+    }
+    input.close();

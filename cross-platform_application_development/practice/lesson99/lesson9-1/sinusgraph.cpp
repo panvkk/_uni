@@ -43,7 +43,7 @@ int main() {
     // Определяем отступы, чтобы оставить место для подписей
     int leftMargin = 8;    // для подписей по оси Y
     int rightMargin = 2;
-    int topMargin = 1;     // для стрелок оси Y
+    int topMargin = 1;     // для стрелок о5си Y
     int bottomMargin = 2;  // для подписей оси X
 
     int plotWidth = termWidth - leftMargin - rightMargin;
