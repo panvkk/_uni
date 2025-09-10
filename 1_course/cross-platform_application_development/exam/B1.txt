@@ -1,0 +1,2 @@
+Apple;Fruits;10
+Sugar;Bacaleya;5

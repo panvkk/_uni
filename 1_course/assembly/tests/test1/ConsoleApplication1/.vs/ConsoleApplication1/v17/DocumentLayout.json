@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\_uni\\assembly\\tests\\test1\\ConsoleApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{978F7858-02FF-49DC-BBAD-C44F51E8FAE7}|ConsoleApplication1.vcxproj|D:\\_uni\\assembly\\tests\\test1\\ConsoleApplication1\\test1_asm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{978F7858-02FF-49DC-BBAD-C44F51E8FAE7}|ConsoleApplication1.vcxproj|solutionrelative:test1_asm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978F7858-02FF-49DC-BBAD-C44F51E8FAE7}|ConsoleApplication1.vcxproj|D:\\_uni\\assembly\\tests\\test1\\ConsoleApplication1\\getStatistics.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{978F7858-02FF-49DC-BBAD-C44F51E8FAE7}|ConsoleApplication1.vcxproj|solutionrelative:getStatistics.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978F7858-02FF-49DC-BBAD-C44F51E8FAE7}|ConsoleApplication1.vcxproj|D:\\_uni\\assembly\\tests\\test1\\ConsoleApplication1\\Input.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{978F7858-02FF-49DC-BBAD-C44F51E8FAE7}|ConsoleApplication1.vcxproj|solutionrelative:Input.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Input.txt",
+              "DocumentMoniker": "D:\\_uni\\assembly\\tests\\test1\\ConsoleApplication1\\Input.txt",
+              "RelativeDocumentMoniker": "Input.txt",
+              "ToolTip": "D:\\_uni\\assembly\\tests\\test1\\ConsoleApplication1\\Input.txt*",
+              "RelativeToolTip": "Input.txt*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-04-04T07:35:42.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test1_asm.cpp",
+              "DocumentMoniker": "D:\\_uni\\assembly\\tests\\test1\\ConsoleApplication1\\test1_asm.cpp",
+              "RelativeDocumentMoniker": "test1_asm.cpp",
+              "ToolTip": "D:\\_uni\\assembly\\tests\\test1\\ConsoleApplication1\\test1_asm.cpp",
+              "RelativeToolTip": "test1_asm.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-03T17:36:40.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "getStatistics.asm",
+              "DocumentMoniker": "D:\\_uni\\assembly\\tests\\test1\\ConsoleApplication1\\getStatistics.asm",
+              "RelativeDocumentMoniker": "getStatistics.asm",
+              "ToolTip": "D:\\_uni\\assembly\\tests\\test1\\ConsoleApplication1\\getStatistics.asm",
+              "RelativeToolTip": "getStatistics.asm",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAQwGoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-03T17:42:43.344Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

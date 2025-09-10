@@ -1,0 +1,4 @@
+Iphone;SmartPhones;12.000000
+Google Pixel;SmartPhones;56.000000
+Nokia;Phones;7500.000000
+Samsung Age;SmartPhones;1000.000000

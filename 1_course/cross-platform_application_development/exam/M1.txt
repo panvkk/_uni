@@ -1,0 +1,3 @@
+Apple;Fruits
+Sugar;Bacaleya
+Orange;Fruits

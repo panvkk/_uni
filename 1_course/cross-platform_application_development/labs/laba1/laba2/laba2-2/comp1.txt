@@ -1,0 +1,2 @@
+Iphone;SmartPhones;12
+Google Pixel;SmartPhones;56

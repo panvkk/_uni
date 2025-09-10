@@ -1,0 +1,2 @@
+Nokia;Phones;7500
+Samsung Age;SmartPhones;1000
