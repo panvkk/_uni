@@ -8,8 +8,14 @@ int main() {
         std::cin >> array[i];
     }
 
+    if (array_size == 1) {
+        std::cout << array[0] << std::endl << "1" << std::endl;
+        delete[] array;
+        return 0;
+    }
     if (array_size < 3) {
         std::cout << "-1" << std::endl;
+        delete[] array;
         return 0;
     }
 
@@ -19,7 +25,7 @@ int main() {
     prev[array_size - 3] = array_size - 1;
 
     int c = array[array_size - 1];
-    int b = array[array_size - 2];
+    int b = -1;
     int a = array[array_size - 1] + array[array_size - 3];
 
     for (int i  = array_size - 4; i >= 0; i--) {

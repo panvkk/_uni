@@ -8,8 +8,8 @@ public class TaskLaba1 {
 
 
         System.out.println("Введите X в радианах: ");
-        float x = input.nextFloat();
-        x = x % 6.28f;
+        double x = input.nextDouble();
+        x = x % Math.PI;
 
         System.out.println("Введите K (точность): ");
         int k = input.nextInt();
@@ -26,7 +26,7 @@ public class TaskLaba1 {
         System.out.printf(formatter.format(Math.sin(x)));
     }
 
-    private double calculateSin(float x, int k) {
+    private double calculateSin(double x, int k) {
         double epsilon = Math.pow(10, -k);
         double previous = 2 ;
         double sin = 0;
