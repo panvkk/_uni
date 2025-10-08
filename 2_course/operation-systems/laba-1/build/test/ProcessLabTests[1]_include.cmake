@@ -1,0 +1,5 @@
+if(EXISTS "D:/_uni/2_course/operation-systems/laba-1/build/test/ProcessLabTests[1]_tests.cmake")
+  include("D:/_uni/2_course/operation-systems/laba-1/build/test/ProcessLabTests[1]_tests.cmake")
+else()
+  add_test(ProcessLabTests_NOT_BUILT ProcessLabTests_NOT_BUILT)
+endif()
