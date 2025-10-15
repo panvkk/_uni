@@ -1,0 +1,21 @@
+Start testing: Oct 15 20:39 Беларусь (зима)
+----------------------------------------------------------
+1/1 Testing: StdVersionCleanupTest
+1/1 Test: StdVersionCleanupTest
+Command: "D:/_uni/2_course/operation-systems/laba-3/std/build/std_tests.exe"
+Directory: D:/_uni/2_course/operation-systems/laba-3/std/build
+"StdVersionCleanupTest" start time: Oct 15 20:39 Беларусь (зима)
+Output:
+----------------------------------------------------------
+Running std::thread cleanup test...
+Thread 1: cannot mark element 1. Marked elements: 2.
+Test passed.
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"StdVersionCleanupTest" end time: Oct 15 20:39 Беларусь (зима)
+"StdVersionCleanupTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 15 20:39 Беларусь (зима)
