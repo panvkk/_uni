@@ -60,7 +60,7 @@ void printReportFile(const std::string& fileName) {
     char bom[3];
     inFile.read(bom, 3);
     if (!(bom[0] == '\xEF' && bom[1] == '\xBB' && bom[2] == '\xBF')) {
-        inFile.seekg(0); // Если это не BOM, возвращаемся к началу файла
+        inFile.seekg(0);
     }
 
     std::cout << "\n--- Report from " << fileName << " ---" << std::endl;
