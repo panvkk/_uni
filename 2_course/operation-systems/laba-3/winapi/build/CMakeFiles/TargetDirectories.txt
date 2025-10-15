@@ -1,5 +1,0 @@
-D:/_uni/2_course/operation-systems/laba-3/winapi/build/CMakeFiles/winapi_marker.dir
-D:/_uni/2_course/operation-systems/laba-3/winapi/build/CMakeFiles/winapi_tests.dir
-D:/_uni/2_course/operation-systems/laba-3/winapi/build/CMakeFiles/test.dir
-D:/_uni/2_course/operation-systems/laba-3/winapi/build/CMakeFiles/edit_cache.dir
-D:/_uni/2_course/operation-systems/laba-3/winapi/build/CMakeFiles/rebuild_cache.dir

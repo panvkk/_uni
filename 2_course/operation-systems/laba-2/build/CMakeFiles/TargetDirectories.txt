@@ -1,5 +1,0 @@
-D:/_uni/2_course/operation-systems/laba-2/build/CMakeFiles/laba_2_std.dir
-D:/_uni/2_course/operation-systems/laba-2/build/CMakeFiles/laba_2_winapi.dir
-D:/_uni/2_course/operation-systems/laba-2/build/CMakeFiles/tests.dir
-D:/_uni/2_course/operation-systems/laba-2/build/CMakeFiles/edit_cache.dir
-D:/_uni/2_course/operation-systems/laba-2/build/CMakeFiles/rebuild_cache.dir

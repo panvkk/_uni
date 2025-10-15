@@ -1,5 +1,0 @@
-D:/_uni/2_course/operation-systems/laba-3/std/build/CMakeFiles/std_marker.dir
-D:/_uni/2_course/operation-systems/laba-3/std/build/CMakeFiles/std_tests.dir
-D:/_uni/2_course/operation-systems/laba-3/std/build/CMakeFiles/test.dir
-D:/_uni/2_course/operation-systems/laba-3/std/build/CMakeFiles/edit_cache.dir
-D:/_uni/2_course/operation-systems/laba-3/std/build/CMakeFiles/rebuild_cache.dir
