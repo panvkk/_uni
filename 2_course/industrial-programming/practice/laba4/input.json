@@ -1,0 +1,54 @@
+[
+  {
+    "lastName": "Иванов",
+    "firstName": "Иван",
+    "middleName": "Иванович",
+    "course": 2,
+    "group": "7",
+    "sessions": [
+      { "sessionNumber": 1, "subject": "Математика", "grade": 10, "isCredit": false },
+      { "sessionNumber": 1, "subject": "Физика", "grade": 10, "isCredit": false },
+      { "sessionNumber": 1, "subject": "Философия", "grade": 10, "isCredit": true }
+    ]
+  },
+  {
+    "lastName": "жопов",
+    "firstName": "жора",
+    "middleName": "жопович",
+    "course": 3,
+    "group": "6",
+    "sessions": [
+      { "sessionNumber": 2, "subject": "Математика", "grade": 10, "isCredit": false }
+    ]
+  },
+  {
+    "lastName": "олег",
+    "firstName": "степаныч",
+    "middleName": "Петрович",
+    "course": 3,
+    "group": "6",
+    "sessions": [
+      { "sessionNumber": 2, "subject": "Математика", "grade": 10, "isCredit": true }
+    ]
+  },
+  {
+    "lastName": "Петров",
+    "firstName": "Петр",
+    "middleName": "Петрович",
+    "course": 3,
+    "group": "6",
+    "sessions": [
+      { "sessionNumber": 2, "subject": "Математика", "grade": 8, "isCredit": false }
+    ]
+  },
+  {
+    "lastName": "Петров",
+    "firstName": "Петр",
+    "middleName": "Петрович",
+    "course": 3,
+    "group": "6",
+    "sessions": [
+      { "sessionNumber": 2, "subject": "Математика", "grade": 8, "isCredit": false }
+    ]
+  }
+]

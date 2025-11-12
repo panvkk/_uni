@@ -1,0 +1,59 @@
+[
+  {
+    "course": 2,
+    "firstName": "Иван",
+    "group": "7",
+    "lastName": "Иванов",
+    "middleName": "Иванович",
+    "sessions": [
+      {
+        "grade": 10,
+        "isCredit": false,
+        "sessionNumber": 1,
+        "subject": "Математика"
+      },
+      {
+        "grade": 10,
+        "isCredit": false,
+        "sessionNumber": 1,
+        "subject": "Физика"
+      },
+      {
+        "grade": 10,
+        "isCredit": true,
+        "sessionNumber": 1,
+        "subject": "Философия"
+      }
+    ]
+  },
+  {
+    "course": 3,
+    "firstName": "жора",
+    "group": "6",
+    "lastName": "жопов",
+    "middleName": "жопович",
+    "sessions": [
+      {
+        "grade": 10,
+        "isCredit": false,
+        "sessionNumber": 2,
+        "subject": "Математика"
+      }
+    ]
+  },
+  {
+    "course": 3,
+    "firstName": "степаныч",
+    "group": "6",
+    "lastName": "олег",
+    "middleName": "Петрович",
+    "sessions": [
+      {
+        "grade": 10,
+        "isCredit": true,
+        "sessionNumber": 2,
+        "subject": "Математика"
+      }
+    ]
+  }
+]
