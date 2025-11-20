@@ -3,6 +3,7 @@
 #include <thread>
 #include <chrono>
 #include <mutex>
+#include <windows.h>
 
 struct SharedData {
     std::vector<int> arr;
@@ -21,7 +22,6 @@ void minMaxThread(SharedData* data) {
     for (size_t i = 1; i < data->arr.size(); ++i) {
         if (data->arr[i] < localMin) localMin = data->arr[i];
         if (data->arr[i] > localMax) localMax = data->arr[i];
-        std::this_thread::sleep_for(std::chrono::milliseconds(7));
     }
 
     {
@@ -39,7 +39,6 @@ void averageThread(SharedData* data) {
     long long sum = 0;
     for (int v : data->arr) {
         sum += v;
-        std::this_thread::sleep_for(std::chrono::milliseconds(12));
     }
 
     {
@@ -50,6 +49,9 @@ void averageThread(SharedData* data) {
 }
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+
     SharedData data;
 
     std::cout << "Введите размер массива: ";

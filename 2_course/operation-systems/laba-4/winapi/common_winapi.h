@@ -12,6 +12,8 @@
 #define COMMON_SEM_EMPTY_NAME "Global\\IPC_FIFO_SemEmpty"
 #define COMMON_SEM_FULL_NAME "Global\\IPC_FIFO_SemFull"
 #define COMMON_EVENT_PREFIX "Global\\IPC_FIFO_Event_"
+// Событие выключения, необходимое для корректного завершения в тестах
+#define COMMON_SHUTDOWN_EVENT_NAME "Global\\IPC_FIFO_Shutdown"
 
 // Сообщение
 struct Message {
@@ -28,8 +30,7 @@ struct SharedHeader {
 // Вспомогательная функция для перевода кода ошибки WinAPI в читаемую строку
 inline std::string GetLastErrorAsString() {
     DWORD errorMessageID = GetLastError();
-    if (errorMessageID == 0)
-        return std::string();
+    if (errorMessageID == 0) return std::string();
 
     LPSTR messageBuffer = nullptr;
     size_t size = FormatMessageA(
@@ -39,11 +40,9 @@ inline std::string GetLastErrorAsString() {
     std::string message(messageBuffer, size);
     LocalFree(messageBuffer);
 
-    // Очистка от \r\n в конце
     size_t end = message.find_last_not_of(" \n\r\t");
     if (std::string::npos != end) {
         message = message.substr(0, end + 1);
     }
-
     return message;
 }

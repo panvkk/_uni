@@ -1,1 +1,0 @@
-rootProject.name = "personal-1-koltin"

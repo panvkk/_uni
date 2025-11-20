@@ -1,8 +1,8 @@
 [
   {
-    "course": 2,
+    "course": 3,
     "firstName": "Иван",
-    "group": "7",
+    "group": "А-301",
     "lastName": "Иванов",
     "middleName": "Иванович",
     "sessions": [
@@ -19,40 +19,37 @@
         "subject": "Физика"
       },
       {
-        "grade": 10,
+        "grade": 1,
         "isCredit": true,
         "sessionNumber": 1,
-        "subject": "Философия"
+        "subject": "Физкультура"
       }
     ]
   },
   {
-    "course": 3,
-    "firstName": "жора",
-    "group": "6",
-    "lastName": "жопов",
-    "middleName": "жопович",
+    "course": 4,
+    "firstName": "Сидор",
+    "group": "Б-402",
+    "lastName": "Сидоров",
+    "middleName": "Сидорович",
     "sessions": [
+      {
+        "grade": 9,
+        "isCredit": false,
+        "sessionNumber": 2,
+        "subject": "Программирование"
+      },
       {
         "grade": 10,
         "isCredit": false,
         "sessionNumber": 2,
-        "subject": "Математика"
-      }
-    ]
-  },
-  {
-    "course": 3,
-    "firstName": "степаныч",
-    "group": "6",
-    "lastName": "олег",
-    "middleName": "Петрович",
-    "sessions": [
+        "subject": "Экономика"
+      },
       {
-        "grade": 10,
+        "grade": 1,
         "isCredit": true,
         "sessionNumber": 2,
-        "subject": "Математика"
+        "subject": "Английский"
       }
     ]
   }

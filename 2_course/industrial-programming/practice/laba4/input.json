@@ -1,54 +1,83 @@
 [
   {
-    "lastName": "Иванов",
+    "course": 3,
     "firstName": "Иван",
+    "group": "А-301",
+    "lastName": "Иванов",
     "middleName": "Иванович",
-    "course": 2,
-    "group": "7",
     "sessions": [
-      { "sessionNumber": 1, "subject": "Математика", "grade": 10, "isCredit": false },
-      { "sessionNumber": 1, "subject": "Физика", "grade": 10, "isCredit": false },
-      { "sessionNumber": 1, "subject": "Философия", "grade": 10, "isCredit": true }
+      {
+        "grade": 10,
+        "isCredit": false,
+        "sessionNumber": 1,
+        "subject": "Математика"
+      },
+      {
+        "grade": 10,
+        "isCredit": false,
+        "sessionNumber": 1,
+        "subject": "Физика"
+      },
+      {
+        "grade": 1,
+        "isCredit": true,
+        "sessionNumber": 1,
+        "subject": "Физкультура"
+      }
     ]
   },
   {
-    "lastName": "жопов",
-    "firstName": "жора",
-    "middleName": "жопович",
     "course": 3,
-    "group": "6",
-    "sessions": [
-      { "sessionNumber": 2, "subject": "Математика", "grade": 10, "isCredit": false }
-    ]
-  },
-  {
-    "lastName": "олег",
-    "firstName": "степаныч",
-    "middleName": "Петрович",
-    "course": 3,
-    "group": "6",
-    "sessions": [
-      { "sessionNumber": 2, "subject": "Математика", "grade": 10, "isCredit": true }
-    ]
-  },
-  {
-    "lastName": "Петров",
     "firstName": "Петр",
+    "group": "А-301",
+    "lastName": "Петров",
     "middleName": "Петрович",
-    "course": 3,
-    "group": "6",
     "sessions": [
-      { "sessionNumber": 2, "subject": "Математика", "grade": 8, "isCredit": false }
+      {
+        "grade": 8,
+        "isCredit": false,
+        "sessionNumber": 1,
+        "subject": "Математика"
+      },
+      {
+        "grade": 9,
+        "isCredit": false,
+        "sessionNumber": 1,
+        "subject": "Химия"
+      },
+      {
+        "grade": 1,
+        "isCredit": true,
+        "sessionNumber": 1,
+        "subject": "Физкультура"
+      }
     ]
   },
   {
-    "lastName": "Петров",
-    "firstName": "Петр",
-    "middleName": "Петрович",
-    "course": 3,
-    "group": "6",
+    "course": 4,
+    "firstName": "Сидор",
+    "group": "Б-402",
+    "lastName": "Сидоров",
+    "middleName": "Сидорович",
     "sessions": [
-      { "sessionNumber": 2, "subject": "Математика", "grade": 8, "isCredit": false }
+      {
+        "grade": 9,
+        "isCredit": false,
+        "sessionNumber": 2,
+        "subject": "Программирование"
+      },
+      {
+        "grade": 10,
+        "isCredit": false,
+        "sessionNumber": 2,
+        "subject": "Экономика"
+      },
+      {
+        "grade": 1,
+        "isCredit": true,
+        "sessionNumber": 2,
+        "subject": "Английский"
+      }
     ]
   }
 ]
