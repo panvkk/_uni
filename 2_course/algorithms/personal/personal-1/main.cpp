@@ -30,7 +30,7 @@ int main() {
         for (int j = 0; j < boxSize + 1; j++) {
             dp[i][j] = dp[i-1][j];
             if (j >= items[i] && (dp[i][j] < dp[i - 1][j - items[i]] + time[i])) {
-                dp[i][j] = dp[i - 1][j - items[i]] + time[i];
+                dp[i][j] = dp[i - 1][j - items[i]] + time[i];z
             }
         }
     }
