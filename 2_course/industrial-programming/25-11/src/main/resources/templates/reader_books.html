@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Reader Dashboard</title>
+  <!-- Подключаем Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Иконки -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+
+<!-- Навигационная панель -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <i class="bi bi-book-half"></i> Library System
+    </a>
+    <div class="d-flex">
+      <a href="/reader/account" class="btn btn-outline-light me-2">My Account</a>
+      <a href="/logout" class="btn btn-danger">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-white py-3">
+      <h2 class="mb-0 text-primary">Book Catalog</h2>
+    </div>
+    <div class="card-body">
+
+      <!-- Форма поиска -->
+      <form action="/reader/books" method="get" class="row g-3 mb-4">
+        <div class="col-md-10">
+          <div class="input-group">
+            <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+            <input type="text" name="query" class="form-control" placeholder="Search by title, author, year, genre..." th:value="${param.query}">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-primary w-100">Search</button>
+        </div>
+      </form>
+
+      <!-- Таблица -->
+      <div class="table-responsive">
+        <table class="table table-hover table-striped align-middle">
+          <thead class="table-dark">
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year</th>
+            <th>Genre</th>
+            <th>Price</th>
+            <th>Status</th>
+          </tr>
+          </thead>
+          <tbody>
+          <!-- Если книг нет -->
+          <tr th:if="${#lists.isEmpty(books)}">
+            <td colspan="6" class="text-center py-4 text-muted">
+              No books found matching your criteria.
+            </td>
+          </tr>
+
+          <!-- Список книг -->
+          <tr th:each="book : ${books}">
+            <td>
+              <strong th:text="${book.title}"></strong>
+            </td>
+            <td th:text="${book.author}"></td>
+            <td><span class="badge bg-secondary" th:text="${book.year}"></span></td>
+            <td th:text="${book.genre}"></td>
+            <td class="text-success fw-bold" th:text="${book.price} + ' ₽'"></td>
+            <td>
+              <span th:if="${book.availableCopies > 0}" class="badge bg-success">Available</span>
+              <span th:if="${book.availableCopies == 0}" class="badge bg-danger">Out of Stock</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

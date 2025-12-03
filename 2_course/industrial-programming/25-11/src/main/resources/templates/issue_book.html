@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Issue Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow border-warning">
+                <div class="card-header bg-warning text-dark">
+                    <h4 class="mb-0">Issue Book to Reader</h4>
+                </div>
+                <div class="card-body">
+                    <form th:action="@{/librarian/issue}" method="post">
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Select Reader:</label>
+                            <select name="userId" class="form-select" size="5" required>
+                                <option th:each="u : ${users}" th:value="${u.id}" th:text="${u.username} + ' (' + ${u.role} + ')'"></option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Select Book:</label>
+                            <select name="bookId" class="form-select" size="5" required>
+                                <option th:each="b : ${books}" th:value="${b.id}"
+                                        th:text="${b.title} + ' — Available: ' + ${b.availableCopies}"
+                                        th:disabled="${b.availableCopies == 0}">
+                                </option>
+                            </select>
+                            <div class="form-text text-muted">Grayed out books are out of stock.</div>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-warning">Confirm Issue</button>
+                            <a href="/librarian/books" class="btn btn-outline-secondary">Back to Dashboard</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,21 +1,14 @@
-package org.example;
+package org.example.model;
 
 import jakarta.xml.bind.annotation.*;
+import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
 @XmlRootElement(name = "library")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Library {
-
+public class LibraryWrapper {
     @XmlElement(name = "book")
     private List<Book> books = new ArrayList<>();
-
-    public List<Book> getBooks() {
-        return books;
-    }
-
-    public void setBooks(List<Book> books) {
-        this.books = books;
-    }
 }

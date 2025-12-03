@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Librarian Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#">Librarian Panel</a>
+    <div class="d-flex gap-2">
+      <a href="/librarian/return" class="btn btn-primary btn-sm"><i class="bi bi-journal-arrow-down"></i> Return Book</a>
+      <a href="/librarian/books/add" class="btn btn-success btn-sm"><i class="bi bi-plus-circle"></i> Add Book</a>
+      <a href="/librarian/issue" class="btn btn-warning btn-sm"><i class="bi bi-journal-arrow-up"></i> Issue Book</a>
+      <a href="/librarian/readers" class="btn btn-info btn-sm"><i class="bi bi-people"></i> Readers</a>
+      <a href="/logout" class="btn btn-outline-light btn-sm">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h4 class="card-title mb-4">Manage Books</h4>
+      <table class="table table-bordered table-hover align-middle">
+        <thead class="table-light">
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Current Price</th>
+          <th>Copies (Avail/Total)</th>
+          <th>Update Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="book : ${books}">
+          <td th:text="${book.id}"></td>
+          <td th:text="${book.title}"></td>
+          <td th:text="${book.price}"></td>
+          <td>
+            <span th:text="${book.availableCopies}"></span> / <span th:text="${book.totalCopies}"></span>
+          </td>
+          <td>
+            <form th:action="@{/librarian/books/updatePrice}" method="post" class="d-flex gap-2">
+              <input type="hidden" name="id" th:value="${book.id}"/>
+              <input type="number" step="0.1" name="newPrice" class="form-control form-control-sm" placeholder="New Price" style="width: 100px;" required/>
+              <button type="submit" class="btn btn-primary btn-sm">Update</button>
+            </form>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

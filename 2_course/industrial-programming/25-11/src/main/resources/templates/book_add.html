@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Add New Book</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-header bg-success text-white">
+          <h4 class="mb-0">Add New Book</h4>
+        </div>
+        <div class="card-body">
+          <form th:action="@{/librarian/books/add}" th:object="${book}" method="post">
+            <div class="mb-3">
+              <label class="form-label">Title</label>
+              <input type="text" th:field="*{title}" class="form-control" required/>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Author</label>
+                <input type="text" th:field="*{author}" class="form-control" required/>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Genre</label>
+                <input type="text" th:field="*{genre}" class="form-control" required/>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <label class="form-label">Year</label>
+                <input type="number" th:field="*{year}" class="form-control" required/>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label class="form-label">Price</label>
+                <input type="number" step="0.1" th:field="*{price}" class="form-control" required/>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label class="form-label">Total Copies</label>
+                <input type="number" th:field="*{totalCopies}" class="form-control" required/>
+              </div>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-success">Save Book</button>
+              <a href="/librarian/books" class="btn btn-outline-secondary">Cancel</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

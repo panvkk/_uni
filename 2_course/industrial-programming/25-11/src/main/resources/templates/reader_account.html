@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>My Account</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="/reader/books"><i class="bi bi-book-half"></i> Library System</a>
+    <div class="d-flex">
+      <a href="/logout" class="btn btn-danger btn-sm">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-sm mb-4">
+        <div class="card-header bg-white">
+          <h4 class="mb-0 text-primary"><i class="bi bi-person-circle"></i> My Profile</h4>
+        </div>
+        <div class="card-body">
+          <div class="row mb-2">
+            <div class="col-sm-4 text-muted">Username:</div>
+            <div class="col-sm-8 fw-bold" th:text="${user.username}"></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 text-muted">Role:</div>
+            <div class="col-sm-8"><span class="badge bg-info text-dark" th:text="${user.role}"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card shadow-sm">
+        <div class="card-header bg-white">
+          <h4 class="mb-0 text-success"><i class="bi bi-journal-check"></i> Issued Books</h4>
+        </div>
+        <div class="card-body">
+          <div th:if="${#lists.isEmpty(user.issuedBooks)}" class="text-center py-3 text-muted">
+            You haven't borrowed any books yet.
+          </div>
+
+          <ul th:if="${not #lists.isEmpty(user.issuedBooks)}" class="list-group list-group-flush">
+            <li th:each="book : ${user.issuedBooks}" class="list-group-item d-flex justify-content-between align-items-center">
+              <span th:text="${book}"></span>
+              <span class="badge bg-success rounded-pill">Active</span>
+            </li>
+          </ul>
+        </div>
+        <div class="card-footer bg-white text-end">
+          <a href="/reader/books" class="btn btn-primary">Browse Catalog</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
