@@ -5,16 +5,16 @@
         <author>Lev Tolstoy</author>
         <year>1869</year>
         <genre>Novel</genre>
-        <price>2000.0</price>
+        <price>1.4</price>
     </book>
     <book id="2" totalCopies="3" availableCopies="0">
         <title>Anna Karenina</title>
         <author>Lev Tolstoy</author>
         <year>1877</year>
         <genre>Romance</genre>
-        <price>1200.0</price>
+        <price>1300.0</price>
     </book>
-    <book id="3" totalCopies="4" availableCopies="4">
+    <book id="3" totalCopies="4" availableCopies="3">
         <title>Crime and Punishment</title>
         <author>Fyodor Dostoevsky</author>
         <year>1866</year>
@@ -104,5 +104,26 @@
         <year>1937</year>
         <genre>Fantasy</genre>
         <price>900.0</price>
+    </book>
+    <book id="16" totalCopies="1488" availableCopies="1487">
+        <title>История Современной Беларуси</title>
+        <author>Люди</author>
+        <year>2025</year>
+        <genre>Жесткое порно</genre>
+        <price>100.0</price>
+    </book>
+    <book id="17" totalCopies="1" availableCopies="1">
+        <title>Epstein List</title>
+        <author> Jeffrey Epstein</author>
+        <year>2019</year>
+        <genre>Novel</genre>
+        <price>1000.0</price>
+    </book>
+    <book id="18" totalCopies="1" availableCopies="1">
+        <title>как стать фембоем</title>
+        <author>Edsger Wybe Dijkstra</author>
+        <year>1957</year>
+        <genre>фантастика</genre>
+        <price>90.0</price>
     </book>
 </library>

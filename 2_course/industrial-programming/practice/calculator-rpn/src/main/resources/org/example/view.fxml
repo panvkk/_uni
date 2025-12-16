@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints minWidth="100" halignment="RIGHT"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+
+        <Label text="Выражение:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="inputField" promptText="Пример: 3 + 4 * (2 - x)" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="RPN:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="rpnField" editable="false" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Результат:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="resultField" editable="false" style="-fx-font-weight: bold;" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="computeBtn" text="Вычислить" onAction="#onCompute" defaultButton="true"/>
+        <Button fx:id="clearBtn" text="Очистить" onAction="#onClear"/>
+    </HBox>
+</VBox>

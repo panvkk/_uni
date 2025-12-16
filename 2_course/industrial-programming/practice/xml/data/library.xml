@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<library>
+    <book id="1" totalCopies="5" availableCopies="5">
+        <title>War and Peace</title>
+        <author>Lev Tolstoy</author>
+        <year>1869</year>
+        <genre>Novel</genre>
+        <price>2000.0</price>
+    </book>
+    <book id="2" totalCopies="3" availableCopies="1">
+        <title>Anna Karenina</title>
+        <author>Lev Tolstoy</author>
+        <year>1877</year>
+        <genre>Romance</genre>
+        <price>1200.0</price>
+    </book>
+    <book id="3" totalCopies="4" availableCopies="4">
+        <title>Crime and Punishment</title>
+        <author>Fyodor Dostoevsky</author>
+        <year>1866</year>
+        <genre>Novel</genre>
+        <price>900.0</price>
+    </book>
+    <book id="4" totalCopies="2" availableCopies="0">
+        <title>The Idiot</title>
+        <author>Fyodor Dostoevsky</author>
+        <year>1869</year>
+        <genre>Novel</genre>
+        <price>950.0</price>
+    </book>
+    <book id="5" totalCopies="10" availableCopies="8">
+        <title>Harry Potter 1</title>
+        <author>J.K. Rowling</author>
+        <year>1997</year>
+        <genre>Fantasy</genre>
+        <price>800.0</price>
+    </book>
+    <book id="6" totalCopies="10" availableCopies="2">
+        <title>Harry Potter 2</title>
+        <author>J.K. Rowling</author>
+        <year>1998</year>
+        <genre>Fantasy</genre>
+        <price>800.0</price>
+    </book>
+    <book id="7" totalCopies="6" availableCopies="6">
+        <title>The Master and Margarita</title>
+        <author>Mikhail Bulgakov</author>
+        <year>1967</year>
+        <genre>Satire</genre>
+        <price>1100.0</price>
+    </book>
+    <book id="8" totalCopies="5" availableCopies="2">
+        <title>Heart of a Dog</title>
+        <author>Mikhail Bulgakov</author>
+        <year>1925</year>
+        <genre>Sci-Fi</genre>
+        <price>700.0</price>
+    </book>
+    <book id="9" totalCopies="3" availableCopies="2">
+        <title>1984</title>
+        <author>George Orwell</author>
+        <year>1949</year>
+        <genre>Dystopian</genre>
+        <price>600.0</price>
+    </book>
+    <book id="10" totalCopies="4" availableCopies="1">
+        <title>Animal Farm</title>
+        <author>George Orwell</author>
+        <year>1945</year>
+        <genre>Satire</genre>
+        <price>550.0</price>
+    </book>
+    <book id="11" totalCopies="2" availableCopies="2">
+        <title>The Witcher</title>
+        <author>Andrzej Sapkowski</author>
+        <year>1993</year>
+        <genre>Fantasy</genre>
+        <price>1300.0</price>
+    </book>
+    <book id="12" totalCopies="7" availableCopies="5">
+        <title>Clean Code</title>
+        <author>Robert Martin</author>
+        <year>2008</year>
+        <genre>Education</genre>
+        <price>2500.0</price>
+    </book>
+    <book id="13" totalCopies="5" availableCopies="5">
+        <title>Thinking in Java</title>
+        <author>Bruce Eckel</author>
+        <year>2006</year>
+        <genre>Education</genre>
+        <price>3000.0</price>
+    </book>
+    <book id="14" totalCopies="3" availableCopies="1">
+        <title>Effective Java</title>
+        <author>Joshua Bloch</author>
+        <year>2018</year>
+        <genre>Education</genre>
+        <price>3200.0</price>
+    </book>
+    <book id="15" totalCopies="8" availableCopies="4">
+        <title>The Hobbit</title>
+        <author>J.R.R. Tolkien</author>
+        <year>1937</year>
+        <genre>Fantasy</genre>
+        <price>900.0</price>
+    </book>
+    <book id="16" totalCopies="2" availableCopies="2">
+        <title>adfgsd</title>
+        <author>adsgadf</author>
+        <year>111</year>
+        <genre>odfgk</genre>
+        <price>123123.0</price>
+    </book>
+</library>
