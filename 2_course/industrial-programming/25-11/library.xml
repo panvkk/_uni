@@ -14,7 +14,7 @@
         <genre>Romance</genre>
         <price>1300.0</price>
     </book>
-    <book id="3" totalCopies="4" availableCopies="3">
+    <book id="3" totalCopies="4" availableCopies="2">
         <title>Crime and Punishment</title>
         <author>Fyodor Dostoevsky</author>
         <year>1866</year>
@@ -49,14 +49,14 @@
         <genre>Satire</genre>
         <price>1100.0</price>
     </book>
-    <book id="8" totalCopies="5" availableCopies="3">
+    <book id="8" totalCopies="5" availableCopies="2">
         <title>Heart of a Dog</title>
         <author>Mikhail Bulgakov</author>
         <year>1925</year>
         <genre>Sci-Fi</genre>
         <price>700.0</price>
     </book>
-    <book id="9" totalCopies="3" availableCopies="3">
+    <book id="9" totalCopies="3" availableCopies="2">
         <title>1984</title>
         <author>George Orwell</author>
         <year>1949</year>
@@ -77,7 +77,7 @@
         <genre>Fantasy</genre>
         <price>1300.0</price>
     </book>
-    <book id="12" totalCopies="7" availableCopies="5">
+    <book id="12" totalCopies="7" availableCopies="4">
         <title>Clean Code</title>
         <author>Robert Martin</author>
         <year>2008</year>
@@ -110,9 +110,9 @@
         <author>Люди</author>
         <year>2025</year>
         <genre>Жесткое порно</genre>
-        <price>100.0</price>
+        <price>1000.0</price>
     </book>
-    <book id="17" totalCopies="1" availableCopies="1">
+    <book id="17" totalCopies="1" availableCopies="0">
         <title>Epstein List</title>
         <author> Jeffrey Epstein</author>
         <year>2019</year>

@@ -1,79 +1,236 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class GradeBook {
-    public String lastName;
-    public String firstName;
-    public String middleName;
-    public int course;
-    public String group;
-    public List<SessionRecord> sessions = new ArrayList<>();
+    // КОНСТАНТЫ: Сделаны public static final для доступа из Main.java (исправляет ошибки доступа)
+    public static final byte EXAM_MIN_MARK = 0;
+    public static final byte EXAM_MAX_MARK = 10;
+    public static final byte CREDIT_PASSED_MARK = 1;
+    public static final byte CREDIT_FAILED_MARK = 0;
+    public static final double MIN_AVERAGE = 0.0;
+    public static final double MAX_AVERAGE = 10.0;
+    public static final byte MIN_SESSION = 1;
+    public static final byte MAX_SESSION = 9;
 
-    public static class SessionRecord {
-        public int sessionNumber;
-        public String subject;
-        public int grade;
-        public boolean isCredit;
+    private String surname;
+    private String name;
+    private String middle_name;
+    private byte course;
+    private byte group;
+    private double averageAll;
+    private final List<Session> sessions = new ArrayList<>(MAX_SESSION);
 
-        @Override
-        public String toString() {
-            // Для зачета: 1 = "Зачтено", другое = "Не зачтено"
-            String gradeDisplay = isCredit ? (grade == 1 ? "Зачтено" : "Не зачтено") : String.valueOf(grade);
-            return String.format("Сессия %d - %s: %s", sessionNumber, subject, gradeDisplay);
+    public GradeBook (String surname,
+                      String name,
+                      String middle_name,
+                      byte course,
+                      byte group) {
+        this.surname = Objects.requireNonNull(surname);
+        this.name = Objects.requireNonNull(name);
+        this.middle_name = Objects.requireNonNull(middle_name);
+        this.course = course;
+        this.group = group;
+
+        // Инициализируем все 9 сессий сразу
+        for (byte num = MIN_SESSION; num <= MAX_SESSION; num++) {
+            sessions.add(new Session(num));
         }
     }
 
-    public boolean isExcellent() {
-        for (SessionRecord r : sessions) {
-            // Для зачета (isCredit = true) - Оценка 1 = "Зачтено"
-            if (r.isCredit) {
-                if (r.grade < 1) return false;
-                // Для экзамена/диф. зачета (isCredit = false) - Оценка >= 9
+    public void calculateAllAverages() {
+        double totalExamMarkSum = 0;
+        int totalExamCount = 0;
+
+        for (byte i = MIN_SESSION; i <= MAX_SESSION; i++) {
+            Session currentSession = this.getSession(i);
+
+            if (!currentSession.isDisciplinesEmpty()) {
+                double sessionExamMarkSum = 0;
+                int sessionExamCount = 0;
+
+                for (GradeBook.Session.Discipline disc : currentSession.getDisciplines()) {
+                    if (disc.isExam()) {
+                        sessionExamMarkSum += disc.getMark();
+                        sessionExamCount++;
+                    }
+                }
+
+                // Обновление общего среднего
+                totalExamMarkSum += sessionExamMarkSum;
+                totalExamCount += sessionExamCount;
+
+                // Обновление среднего балла сессии
+                if (sessionExamCount > 0) {
+                    currentSession.setAverage(sessionExamMarkSum / sessionExamCount);
+                } else {
+                    currentSession.setAverage(0.0);
+                }
             } else {
-                if (r.grade < 9) return false;
+                currentSession.setAverage(0.0);
+            }
+        }
+
+        // Обновление общего среднего балла
+        if (totalExamCount > 0) {
+            this.setAverageAll(totalExamMarkSum / totalExamCount);
+        } else {
+            // Устанавливаем 0.0, если оценок нет
+            this.averageAll = 0.0;
+        }
+    }
+
+    // Оставлен для совместимости с оригинальным кодом
+    public void calculateAverageMarkAllSessions() {
+        calculateAllAverages();
+    }
+
+    public void setAverageAll(double a) {
+        // Убрал проверку a <= 0, чтобы позволить среднему баллу быть 0.0
+        if (a < MIN_AVERAGE || a > MAX_AVERAGE) {
+            throw new IllegalArgumentException("Average mark should be >= " + MIN_AVERAGE + " and <= " + MAX_AVERAGE);
+        }
+        this.averageAll = a;
+    }
+
+    public double getAverageAll() {
+        return averageAll;
+    }
+
+    public boolean isExcellent() {
+        for (Session session : this.sessions) {
+            if (session.isDisciplinesEmpty()) {
+                continue;
+            }
+
+            for (GradeBook.Session.Discipline disc : session.getDisciplines()) {
+                byte mark = disc.getMark();
+
+                if (disc.isExam()) {
+                    // Экзамен: должен быть >= 9
+                    if (mark < 9) {
+                        return false;
+                    }
+                } else {
+                    // Зачёт: должен быть Зачтено (1)
+                    if (mark != CREDIT_PASSED_MARK) {
+                        return false;
+                    }
+                }
             }
         }
         return true;
     }
 
-    public static GradeBook fromTxtLine(String line) {
-        GradeBook gb = new GradeBook();
-        String[] parts = line.split(";");
-
-        if (parts.length < 5) {
-            throw new IllegalArgumentException("Недостаточно полей для GradeBook: " + line);
+    // Переименован для соответствия именованию Java-методов
+    public void calculateAverageMarkInSession(byte n) {
+        if (n < MIN_SESSION || n > MAX_SESSION) {
+            throw new IllegalArgumentException("Number of session should be >= " + MIN_SESSION + " and <= " + MAX_SESSION);
         }
 
-        gb.lastName = parts[0];
-        gb.firstName = parts[1];
-        gb.middleName = parts[2];
-        // Использование trim() для удаления лишних пробелов, которые могут быть перед числами
-        gb.course = Integer.parseInt(parts[3].trim());
-        gb.group = parts[4];
+        Session currentSession = this.getSession(n);
 
-        for (int i = 5; i < parts.length; i++) {
-            String sessionPart = parts[i];
-            String[] sessionFields = sessionPart.split(":");
-            if (sessionFields.length == 4) {
-                SessionRecord sr = new SessionRecord();
-                sr.sessionNumber = Integer.parseInt(sessionFields[0].trim());
-                sr.subject = sessionFields[1];
-                sr.grade = Integer.parseInt(sessionFields[2].trim());
-                sr.isCredit = Boolean.parseBoolean(sessionFields[3].trim());
-                gb.sessions.add(sr);
+        double average = 0;
+        int i = 0;
+
+        if (!currentSession.isDisciplinesEmpty()) {
+            for (GradeBook.Session.Discipline disc : currentSession.getDisciplines()) {
+                if (disc.isExam()) {
+                    average += disc.getMark();
+                    i++;
+                }
             }
         }
 
-        return gb;
+        if (i > 0) {
+            currentSession.setAverage(average / i);
+        } else {
+            currentSession.setAverage(0.0);
+        }
     }
 
-    // Измененный метод для output.txt
-    public String toTxtString() {
-        String excellentStatus = isExcellent() ? "Отличник" : "Обычный студент";
-        // Формат для output.txt: Фамилия Имя Отчество;Курс;Группа;Статус
-        return String.format("%s %s %s;%d;%s;%s",
-                lastName, firstName, middleName, course, group, excellentStatus);
+    public List<Session> getSessions() {
+        return Collections.unmodifiableList(sessions);
+    }
+
+    public Session getSession(byte session_number) {
+        if (session_number < MIN_SESSION || session_number > MAX_SESSION) {
+            throw new IllegalArgumentException("Number of session should be >=" + MIN_SESSION + " and <=" + MAX_SESSION);
+        }
+
+        return sessions.get(session_number - 1);
+    }
+
+    // Геттеры
+    public String getName() { return name; }
+    public String getSurname() { return surname; }
+    public String getMiddleName() { return middle_name; }
+    public byte getCourse() { return course; }
+    public byte getGroup() { return group; }
+    public String getFullName(){
+        return String.format("%s %s %s", surname, name, middle_name);
+    }
+
+    // Внутренний класс Session
+    public class Session {
+        private final byte session_number;
+        private double average;
+        private final List<Discipline> disciplines = new ArrayList<>();
+
+        private Session(byte session_number) {
+            this.session_number = session_number;
+        }
+
+        public byte getSessionNumber() { return session_number; }
+
+        public void setAverage(double a) {
+            if (a < MIN_AVERAGE || a > MAX_AVERAGE) {
+                throw new IllegalArgumentException("Average mark should be >= " + MIN_AVERAGE + " and <= " + MAX_AVERAGE);
+            }
+            this.average = a;
+        }
+
+        public double getAverage() { return average; }
+
+        public List<Discipline> getDisciplines() { return disciplines; }
+
+        public Discipline addDiscipline(String discipline_name, boolean is_exam, byte mark) {
+            // Добавлена валидация оценок на уровне добавления
+            if (is_exam) {
+                if (mark < EXAM_MIN_MARK || mark > EXAM_MAX_MARK) {
+                    throw new IllegalArgumentException("Mark of exam should be >= " + EXAM_MIN_MARK + " and <= " + EXAM_MAX_MARK);
+                }
+            } else {
+                if (mark != CREDIT_PASSED_MARK && mark != CREDIT_FAILED_MARK) {
+                    throw new IllegalArgumentException("Mark of credit should be " + CREDIT_FAILED_MARK + " or " + CREDIT_PASSED_MARK);
+                }
+            }
+
+            Discipline d = new Discipline(discipline_name, is_exam, mark);
+            disciplines.add(d);
+            return d;
+        }
+
+        public boolean isDisciplinesEmpty() { return disciplines.isEmpty(); }
+
+        // Внутренний класс Discipline
+        public class Discipline {
+            private final String discipline_name;
+            private final boolean is_exam;
+            private final byte mark;
+
+            private Discipline(String discipline_name, boolean is_exam, byte mark) {
+                this.discipline_name = discipline_name;
+                this.is_exam = is_exam;
+                this.mark = mark;
+            }
+
+            public String getNameOfDiscipline() { return discipline_name; }
+            public boolean isExam() { return is_exam; }
+            public byte getMark() {
+                // Возвращает сохраненное значение, так как оно уже проверено в addDiscipline
+                return mark;
+            }
+        }
     }
 }

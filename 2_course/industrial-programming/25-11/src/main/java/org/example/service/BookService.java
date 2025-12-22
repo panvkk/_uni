@@ -38,7 +38,7 @@ public class BookService {
         }
     }
 
-    public void saveToXml() {
+    public synchronized void saveToXml() {
         try {
             LibraryWrapper wrapper = new LibraryWrapper();
             wrapper.setBooks(this.books);

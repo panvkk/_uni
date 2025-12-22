@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <library>
-    <book id="1" totalCopies="5" availableCopies="5">
+    <book id="1" totalCopies="5" availableCopies="9">
         <title>War and Peace</title>
         <author>Lev Tolstoy</author>
         <year>1869</year>
@@ -111,5 +111,12 @@
         <year>111</year>
         <genre>odfgk</genre>
         <price>123123.0</price>
+    </book>
+    <book id="17" totalCopies="5" availableCopies="4">
+        <title>Test</title>
+        <author>Test Author</author>
+        <year>888</year>
+        <genre>adfag</genre>
+        <price>1000.0</price>
     </book>
 </library>

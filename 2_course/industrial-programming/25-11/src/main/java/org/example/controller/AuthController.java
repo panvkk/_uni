@@ -7,6 +7,8 @@ import org.example.service.UserService;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,9 +17,12 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class AuthController {
     private final UserService userService;
+    // Добавляем UserDetailsService, чтобы загрузить правильный объект пользователя
+    private final UserDetailsService userDetailsService;
 
-    public AuthController(UserService userService) {
+    public AuthController(UserService userService, UserDetailsService userDetailsService) {
         this.userService = userService;
+        this.userDetailsService = userDetailsService;
     }
 
     @GetMapping("/login")
@@ -31,25 +36,26 @@ public class AuthController {
 
     @PostMapping("/register")
     public String register(@ModelAttribute User user, HttpServletRequest request) {
-        String rawPassword = user.getPassword();
-
-        // 1. Присваиваем роль С ПРЕФИКСОМ для базы данных
+        // 1. Устанавливаем роль
         if (user.getUsername().contains("admin")) {
             user.setRole("ROLE_LIBRARIAN");
         } else {
             user.setRole("ROLE_READER");
         }
 
+        // 2. Сохраняем в БД
         userService.register(user);
 
-        // --- АВТО-ЛОГИН ---
+        // --- ИСПРАВЛЕННЫЙ АВТО-ЛОГИН ---
         try {
-            // 2. Для авто-логина нам нужно создать Authority.
-            // AuthorityUtils.createAuthorityList ожидает полный формат (с ROLE_)
+            // Загружаем UserDetails через стандартный сервис Spring Security
+            // Это гарантирует, что объект будет именно того типа, который ожидают контроллеры
+            UserDetails userDetails = userDetailsService.loadUserByUsername(user.getUsername());
+
             Authentication auth = new UsernamePasswordAuthenticationToken(
-                    user.getUsername(),
-                    null,
-                    org.springframework.security.core.authority.AuthorityUtils.createAuthorityList(user.getRole()) // <-- Тут передаем "ROLE_READER" целиком
+                    userDetails, // <-- Теперь здесь объект, а не просто строка
+                    userDetails.getPassword(),
+                    userDetails.getAuthorities()
             );
 
             SecurityContextHolder.getContext().setAuthentication(auth);

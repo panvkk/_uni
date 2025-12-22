@@ -18,7 +18,11 @@ public class LibrarianController {
     private final UserRepository userRepository;
     private final UserService userService;
 
-    public LibrarianController(BookService bookService, UserRepository userRepository, UserService userService) {
+    public LibrarianController(
+            BookService bookService,
+            UserRepository userRepository,
+            UserService userService
+    ) {
         this.bookService = bookService;
         this.userRepository = userRepository;
         this.userService = userService;
@@ -77,38 +81,40 @@ public class LibrarianController {
         return "redirect:/librarian/issue";
     }
 
-    // --- ВОЗВРАТ КНИГИ (Страница) ---
+    // --- НОВАЯ ЛОГИКА ВОЗВРАТА ---
+
     @GetMapping("/return")
     public String returnPage(Model model) {
-        // Нам нужны и книги, и пользователи, чтобы выбрать, кто и что возвращает
-        model.addAttribute("books", bookService.getAllBooks());
+        // Мы передаем просто список всех пользователей.
+        // Thymeleaf сам переберет их книги.
         model.addAttribute("users", userRepository.findAll());
         return "return_book";
     }
 
-    // --- ВОЗВРАТ КНИГИ (Логика) ---
     @PostMapping("/return")
-    public String returnBook(@RequestParam int bookId, @RequestParam Long userId) {
-        Book book = bookService.getBookById(bookId);
+    public String returnBook(@RequestParam Long userId, @RequestParam String bookString) {
         User user = userRepository.findById(userId).orElse(null);
 
-        if (book != null && user != null) {
-            // 1. Формируем строку, как она записана у пользователя
-            String bookRecord = book.getTitle() + " (" + book.getAuthor() + ")";
-
-            // 2. Проверяем, есть ли у пользователя эта книга
-            if (user.getIssuedBooks().contains(bookRecord)) {
-
-                // 3. Удаляем книгу у пользователя
-                user.getIssuedBooks().remove(bookRecord);
+        if (user != null) {
+            // 1. Удаляем строку с книгой у пользователя
+            // (bookString приходит точно такой, как он записан в базе)
+            if (user.getIssuedBooks().contains(bookString)) {
+                user.getIssuedBooks().remove(bookString);
                 userService.save(user);
 
-                // 4. Увеличиваем количество доступных копий в XML
-                // (но не больше общего количества)
-                if (book.getAvailableCopies() < book.getTotalCopies()) {
-                    book.setAvailableCopies(book.getAvailableCopies() + 1);
-                    bookService.saveToXml();
+                // 2. Ищем эту книгу в XML, чтобы увеличить счетчик
+                // Так как у нас нет ID книги в юзере, ищем по совпадению названия
+                List<Book> allBooks = bookService.getAllBooks();
+                for (Book b : allBooks) {
+                    String recordName = b.getTitle() + " (" + b.getAuthor() + ")";
+                    if (recordName.equals(bookString)) {
+                        if (b.getAvailableCopies() < b.getTotalCopies()) {
+                            b.setAvailableCopies(b.getAvailableCopies() + 1);
+                        }
+                        break; // Книга найдена и обновлена
+                    }
                 }
+                bookService.saveToXml();
             }
         }
         return "redirect:/librarian/return?success";
