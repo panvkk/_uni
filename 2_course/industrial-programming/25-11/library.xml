@@ -70,7 +70,7 @@
         <genre>Satire</genre>
         <price>550.0</price>
     </book>
-    <book id="11" totalCopies="2" availableCopies="2">
+    <book id="11" totalCopies="2" availableCopies="1">
         <title>The Witcher</title>
         <author>Andrzej Sapkowski</author>
         <year>1993</year>
@@ -105,7 +105,7 @@
         <genre>Fantasy</genre>
         <price>900.0</price>
     </book>
-    <book id="16" totalCopies="1488" availableCopies="1487">
+    <book id="16" totalCopies="1488" availableCopies="1486">
         <title>История Современной Беларуси</title>
         <author>Люди</author>
         <year>2025</year>
@@ -125,5 +125,19 @@
         <year>1957</year>
         <genre>фантастика</genre>
         <price>90.0</price>
+    </book>
+    <book id="19" totalCopies="50" availableCopies="50">
+        <title>Dejavu</title>
+        <author>Oleg Nichiporenko</author>
+        <year>2016</year>
+        <genre>Novel</genre>
+        <price>2500.0</price>
+    </book>
+    <book id="20" totalCopies="30" availableCopies="29">
+        <title>Java Language</title>
+        <author>Blinov</author>
+        <year>2020</year>
+        <genre>Science</genre>
+        <price>250.0</price>
     </book>
 </library>
