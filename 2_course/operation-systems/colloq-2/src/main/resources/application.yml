@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: todo-monster-api
+
+  # Настройка БД
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tododb
+    username: user
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  # Настройка Redis (Кеш)
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+  # Настройка RabbitMQ (Очередь)
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: password
+
+# Метрики (Actuator)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics

@@ -1,4 +1,3 @@
 package todo.model
 
-enum class TaskStatus {
-}
+enum class TaskStatus { todo, in_progress, done }
