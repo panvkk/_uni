@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Дополнительная диаграмма прецедентов" version="4">
+  <OBJECT>
+    <ID name="Дополнительная диаграмма прецедентов" mc="Standard.Package" uid="d4c1bb54-78a8-4743-bc6e-126cd566a5ce"/>
+    <PID name="project2" mc="Standard.Package" uid="31114db4-054e-412a-9942-22edc7e0382a"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Дополнительная диаграмма прецедентов]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Пользователь" mc="Standard.Actor" uid="521db8e4-b105-4904-937e-3fe0b24a81d7"/>
+        <COMPID name="Автор" mc="Standard.Actor" uid="7f3d70af-c9fe-4d9f-afe4-8b8248910c79"/>
+        <COMPID name="Оператор системы" mc="Standard.Actor" uid="51958488-48b2-40de-980b-b54ff1567b7a"/>
+        <COMPID name="Импорт публикаций из BibTeX" mc="Standard.UseCase" uid="4c5e04b7-2cbc-4e44-af4f-2fe1a3391576"/>
+        <COMPID name="Поиск и удаление дублей" mc="Standard.UseCase" uid="d5d0209d-d064-42b3-8d8d-77f95c6d0a04"/>
+        <COMPID name="Управление своими публикациями" mc="Standard.UseCase" uid="27abd9e9-762b-4f0e-950d-34556f6aba3f"/>
+        <COMPID name="Поиск и заявка на авторство" mc="Standard.UseCase" uid="bfd7436f-e712-4497-a329-38a2372bbc83"/>
+        <COMPID name="Импорт сведений о цитировании" mc="Standard.UseCase" uid="69a88f14-e235-4c63-8dfa-82ab872399ff"/>
+        <COMPID name="Расчет индекса цитирования" mc="Standard.UseCase" uid="10a86fd3-3d51-46c1-a48f-86b2a3833cc8"/>
+        <COMPID name="Разрешение неоднозначности авторства" mc="Standard.UseCase" uid="353c5e1a-b546-4a11-9bb5-4859863a84f0"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Diagram Use Case diagram" mc="Standard.UseCaseDiagram" uid="2282ba56-88f7-4f87-99e7-5ae29c24a034"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

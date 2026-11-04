@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="project2" version="4">
+  <OBJECT>
+    <ID name="project2" mc="Standard.Package" uid="31114db4-054e-412a-9942-22edc7e0382a"/>
+    <PID name="Project2" mc="Standard.Project" uid="8672b44c-df16-4fe5-9128-52d96c03573b"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[project2]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Diagram" mc="Standard.Package" uid="5e12cfa5-5f17-450e-9294-2aca589a813e"/>
+        <COMPID name="Дополнительная диаграмма прецедентов" mc="Standard.Package" uid="d4c1bb54-78a8-4743-bc6e-126cd566a5ce"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

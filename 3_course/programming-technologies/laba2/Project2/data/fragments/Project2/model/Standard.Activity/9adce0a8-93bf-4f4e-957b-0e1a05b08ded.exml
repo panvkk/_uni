@@ -1,0 +1,705 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Activity" version="4">
+  <OBJECT>
+    <ID name="Activity" mc="Standard.Activity" uid="9adce0a8-93bf-4f4e-957b-0e1a05b08ded"/>
+    <PID name="Поиск и удаление дубликатов в БД" mc="Standard.UseCase" uid="d5d0209d-d064-42b3-8d8d-77f95c6d0a04"/>
+    <ATTRIBUTES>
+      <ATT name="IsSingleExecution">false</ATT>
+      <ATT name="IsReadOnly">false</ATT>
+      <ATT name="IsReentrant">false</ATT>
+      <ATT name="Name"><![CDATA[Activity]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedGroup">
+        <OBJECT>
+          <ID name="Оператор системы" mc="Standard.ActivityPartition" uid="a39b4635-1d21-40cf-8f72-70e1808ebc35"/>
+          <ATTRIBUTES>
+            <ATT name="IsDimension">false</ATT>
+            <ATT name="IsExternal">false</ATT>
+            <ATT name="Name"><![CDATA[Оператор системы]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="ContainedNode">
+              <OBJECT>
+                <ID name="Initial Node" mc="Standard.InitialNode" uid="cd371c4e-a838-423f-b90e-ff126b48d632"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Initial Node]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="fe9f81f9-faaf-4199-a852-bf24222d7fcf"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Запросить поиск дубликатов в БД" mc="Standard.OpaqueAction" uid="eb629a8a-c7c1-4b75-b829-5703a7a685eb"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Запросить поиск дубликатов в БД" mc="Standard.OpaqueAction" uid="eb629a8a-c7c1-4b75-b829-5703a7a685eb"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Запросить поиск дубликатов в БД]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ObjectFlow" mc="Standard.ObjectFlow" uid="a58d91c5-e83a-4ce2-93a0-1dd8bdc3668c"/>
+                      <ATTRIBUTES>
+                        <ATT name="TransformationBehavior"></ATT>
+                        <ATT name="SelectionBehavior"></ATT>
+                        <ATT name="IsMultiCast">false</ATT>
+                        <ATT name="IsMultiReceive">false</ATT>
+                        <ATT name="Effect">ReadFlow</ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ObjectFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Параметры поиска [Заданы]" mc="Standard.DataStoreNode" uid="ba1128ca-da2b-4011-b521-2dfedd927385"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Параметры поиска [Заданы]" mc="Standard.DataStoreNode" uid="ba1128ca-da2b-4011-b521-2dfedd927385"/>
+                <ATTRIBUTES>
+                  <ATT name="IsControlType">false</ATT>
+                  <ATT name="Ordering">FIFO</ATT>
+                  <ATT name="SelectionBehavior"></ATT>
+                  <ATT name="UpperBound"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[Параметры поиска [Заданы]]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Represented">
+                    <REFOBJ>
+                      <ID name="Data Store" mc="Standard.BindableInstance" uid="9bb8cc71-5c2d-403d-ad42-9989ce5edbe3"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ObjectFlow" mc="Standard.ObjectFlow" uid="e56c4636-e65c-4865-9070-986aa3c62a1c"/>
+                      <ATTRIBUTES>
+                        <ATT name="TransformationBehavior"></ATT>
+                        <ATT name="SelectionBehavior"></ATT>
+                        <ATT name="IsMultiCast">false</ATT>
+                        <ATT name="IsMultiReceive">false</ATT>
+                        <ATT name="Effect">ReadFlow</ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ObjectFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Сканирование БД и поиск дубликатов" mc="Standard.OpaqueAction" uid="2ee3ea80-4702-4b44-ab02-da171362b564"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Просмотреть отчет об операции" mc="Standard.OpaqueAction" uid="71feb2b2-11c7-4e61-a93f-fa0f44be4b75"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Просмотреть отчет об операции]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="0452b2b2-edbb-49da-a8f0-a8631b813b65"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="a947b8c3-5216-4e57-a442-f4418c6d651f"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Отчёт об операции [сформирован]" mc="Standard.DataStoreNode" uid="b3b20cbd-2610-48b9-b47c-6c55a760c30a"/>
+                <ATTRIBUTES>
+                  <ATT name="IsControlType">false</ATT>
+                  <ATT name="Ordering">FIFO</ATT>
+                  <ATT name="SelectionBehavior"></ATT>
+                  <ATT name="UpperBound"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[Отчёт об операции [сформирован]]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Represented">
+                    <REFOBJ>
+                      <ID name="Data Store" mc="Standard.BindableInstance" uid="d2bd55b1-1ec3-440c-a00d-192215ffed04"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ObjectFlow" mc="Standard.ObjectFlow" uid="2020e6db-89b2-4c02-ae81-7fff35e1ceb9"/>
+                      <ATTRIBUTES>
+                        <ATT name="TransformationBehavior"></ATT>
+                        <ATT name="SelectionBehavior"></ATT>
+                        <ATT name="IsMultiCast">false</ATT>
+                        <ATT name="IsMultiReceive">false</ATT>
+                        <ATT name="Effect">ReadFlow</ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ObjectFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Просмотреть отчет об операции" mc="Standard.OpaqueAction" uid="71feb2b2-11c7-4e61-a93f-fa0f44be4b75"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="a947b8c3-5216-4e57-a442-f4418c6d651f"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Activity Final Node]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="АИС «Библиографическая система»" mc="Standard.ActivityPartition" uid="1b47ab18-c9e7-45c9-8cd8-4c13992b4fae"/>
+          <ATTRIBUTES>
+            <ATT name="IsDimension">false</ATT>
+            <ATT name="IsExternal">false</ATT>
+            <ATT name="Name"><![CDATA[АИС «Библиографическая система»]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="ContainedNode">
+              <OBJECT>
+                <ID name="Сканирование БД и поиск дубликатов" mc="Standard.OpaqueAction" uid="2ee3ea80-4702-4b44-ab02-da171362b564"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Сканирование БД и поиск дубликатов]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="d89214e7-8091-4ea1-ae42-bfc83571fa01"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Сравнение записей по критериям совпадения" mc="Standard.OpaqueAction" uid="cf0c05af-8a45-48ed-9586-8b93bea6248f"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Сравнение записей по критериям совпадения" mc="Standard.OpaqueAction" uid="cf0c05af-8a45-48ed-9586-8b93bea6248f"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Сравнение записей по критериям совпадения]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="42a78684-fb42-44cb-b8f5-466834d0f334"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Decision-Merge" mc="Standard.DecisionMergeNode" uid="ce0c3abb-6ab8-4ad0-b6a8-9670d83d86ed"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Decision-Merge" mc="Standard.DecisionMergeNode" uid="ce0c3abb-6ab8-4ad0-b6a8-9670d83d86ed"/>
+                <ATTRIBUTES>
+                  <ATT name="DecisionKind">ExclusiveDecision</ATT>
+                  <ATT name="DecisionInputBehavior"></ATT>
+                  <ATT name="Name"><![CDATA[Decision-Merge]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="d4aa0e47-6c73-4deb-88bd-eaac67122ca5"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"><![CDATA[Дубликаты не найдены]]></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Формирование отчета об отсутствии дубликатов" mc="Standard.OpaqueAction" uid="4c5861a0-01d5-43e0-a1fc-d5bc795113d1"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="5fd0a75c-692e-43ee-aeba-97d25e69baa5"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"><![CDATA[Дубликаты найдены]]></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Отображение списка дубликатов" mc="Standard.OpaqueAction" uid="2c5825bb-c395-4eb0-9a74-11600ef8ae0e"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Формирование отчета об отсутствии дубликатов" mc="Standard.OpaqueAction" uid="4c5861a0-01d5-43e0-a1fc-d5bc795113d1"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Формирование отчета об отсутствии дубликатов]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="f8cfa8a3-734f-46f4-9a3a-984780adabaf"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Формирование отчёта об операции" mc="Standard.OpaqueAction" uid="4d85b415-e067-468e-b8bb-960468ef4756"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Отображение списка дубликатов" mc="Standard.OpaqueAction" uid="2c5825bb-c395-4eb0-9a74-11600ef8ae0e"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Отображение списка дубликатов]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ObjectFlow" mc="Standard.ObjectFlow" uid="b3325657-d5bc-4574-81e5-df4b1acf6671"/>
+                      <ATTRIBUTES>
+                        <ATT name="TransformationBehavior"></ATT>
+                        <ATT name="SelectionBehavior"></ATT>
+                        <ATT name="IsMultiCast">false</ATT>
+                        <ATT name="IsMultiReceive">false</ATT>
+                        <ATT name="Effect">ReadFlow</ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ObjectFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Список дубликатов [Отображен]" mc="Standard.DataStoreNode" uid="0c9b249b-99ba-4667-8137-610f7eb82181"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Список дубликатов [Отображен]" mc="Standard.DataStoreNode" uid="0c9b249b-99ba-4667-8137-610f7eb82181"/>
+                <ATTRIBUTES>
+                  <ATT name="IsControlType">false</ATT>
+                  <ATT name="Ordering">FIFO</ATT>
+                  <ATT name="SelectionBehavior"></ATT>
+                  <ATT name="UpperBound"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[Список дубликатов [Отображен]]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Represented">
+                    <REFOBJ>
+                      <ID name="Data Store" mc="Standard.BindableInstance" uid="3a624d3a-2a77-484d-8b82-cb4e80961aed"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ObjectFlow" mc="Standard.ObjectFlow" uid="37744873-ec41-439e-b526-0e7d0d2d1d1a"/>
+                      <ATTRIBUTES>
+                        <ATT name="TransformationBehavior"></ATT>
+                        <ATT name="SelectionBehavior"></ATT>
+                        <ATT name="IsMultiCast">false</ATT>
+                        <ATT name="IsMultiReceive">false</ATT>
+                        <ATT name="Effect">ReadFlow</ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ObjectFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Просмотр списка и выбор дубликатов для удаления" mc="Standard.OpaqueAction" uid="549f52be-8de3-4df9-920d-b2e47a5c40d1"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Просмотр списка и выбор дубликатов для удаления" mc="Standard.OpaqueAction" uid="549f52be-8de3-4df9-920d-b2e47a5c40d1"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Просмотр списка и выбор дубликатов для удаления]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ObjectFlow" mc="Standard.ObjectFlow" uid="e6930149-0853-47b3-ab2f-fb8792c37516"/>
+                      <ATTRIBUTES>
+                        <ATT name="TransformationBehavior"></ATT>
+                        <ATT name="SelectionBehavior"></ATT>
+                        <ATT name="IsMultiCast">false</ATT>
+                        <ATT name="IsMultiReceive">false</ATT>
+                        <ATT name="Effect">ReadFlow</ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ObjectFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Выбранные дубликаты [Подтверждены]" mc="Standard.DataStoreNode" uid="ec9218bd-e80e-4cc8-b616-863f97ce3db0"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Выбранные дубликаты [Подтверждены]" mc="Standard.DataStoreNode" uid="ec9218bd-e80e-4cc8-b616-863f97ce3db0"/>
+                <ATTRIBUTES>
+                  <ATT name="IsControlType">false</ATT>
+                  <ATT name="Ordering">FIFO</ATT>
+                  <ATT name="SelectionBehavior"></ATT>
+                  <ATT name="UpperBound"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[Выбранные дубликаты [Подтверждены]]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Represented">
+                    <REFOBJ>
+                      <ID name="Data Store" mc="Standard.BindableInstance" uid="ab105aa1-01eb-4ed4-b7ad-c3ad02a22cb5"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ObjectFlow" mc="Standard.ObjectFlow" uid="2dada2b7-0e3c-4071-8d45-f3fd41b07696"/>
+                      <ATTRIBUTES>
+                        <ATT name="TransformationBehavior"></ATT>
+                        <ATT name="SelectionBehavior"></ATT>
+                        <ATT name="IsMultiCast">false</ATT>
+                        <ATT name="IsMultiReceive">false</ATT>
+                        <ATT name="Effect">ReadFlow</ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ObjectFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Удаление дубликатов и обновление связей в БД" mc="Standard.OpaqueAction" uid="8e0f12d7-d49a-4e89-9e14-718984e15262"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Удаление дубликатов и обновление связей в БД" mc="Standard.OpaqueAction" uid="8e0f12d7-d49a-4e89-9e14-718984e15262"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Удаление дубликатов и обновление связей в БД]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ObjectFlow" mc="Standard.ObjectFlow" uid="19f7c758-c7ea-42e9-8554-757e0602af22"/>
+                      <ATTRIBUTES>
+                        <ATT name="TransformationBehavior"></ATT>
+                        <ATT name="SelectionBehavior"></ATT>
+                        <ATT name="IsMultiCast">false</ATT>
+                        <ATT name="IsMultiReceive">false</ATT>
+                        <ATT name="Effect">ReadFlow</ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ObjectFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="База данных [Обновлена]" mc="Standard.DataStoreNode" uid="8c3672df-85fd-43c7-9220-472ec5cc0b35"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="База данных [Обновлена]" mc="Standard.DataStoreNode" uid="8c3672df-85fd-43c7-9220-472ec5cc0b35"/>
+                <ATTRIBUTES>
+                  <ATT name="IsControlType">false</ATT>
+                  <ATT name="Ordering">FIFO</ATT>
+                  <ATT name="SelectionBehavior"></ATT>
+                  <ATT name="UpperBound"><![CDATA[1]]></ATT>
+                  <ATT name="Name"><![CDATA[База данных [Обновлена]]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Represented">
+                    <REFOBJ>
+                      <ID name="Data Store" mc="Standard.BindableInstance" uid="afdb3420-3549-4044-a7ac-32a790782e70"/>
+                    </REFOBJ>
+                  </LINK>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ObjectFlow" mc="Standard.ObjectFlow" uid="c73908a5-2b0e-4f7f-9c5c-9640e46e39fc"/>
+                      <ATTRIBUTES>
+                        <ATT name="TransformationBehavior"></ATT>
+                        <ATT name="SelectionBehavior"></ATT>
+                        <ATT name="IsMultiCast">false</ATT>
+                        <ATT name="IsMultiReceive">false</ATT>
+                        <ATT name="Effect">ReadFlow</ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ObjectFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Формирование отчёта об операции" mc="Standard.OpaqueAction" uid="4d85b415-e067-468e-b8bb-960468ef4756"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Формирование отчёта об операции" mc="Standard.OpaqueAction" uid="4d85b415-e067-468e-b8bb-960468ef4756"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Формирование отчёта об операции]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ObjectFlow" mc="Standard.ObjectFlow" uid="5eab33dd-edf1-47ef-9606-85680490a943"/>
+                      <ATTRIBUTES>
+                        <ATT name="TransformationBehavior"></ATT>
+                        <ATT name="SelectionBehavior"></ATT>
+                        <ATT name="IsMultiCast">false</ATT>
+                        <ATT name="IsMultiReceive">false</ATT>
+                        <ATT name="Effect">ReadFlow</ATT>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ObjectFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Отчёт об операции [сформирован]" mc="Standard.DataStoreNode" uid="b3b20cbd-2610-48b9-b47c-6c55a760c30a"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedCollaboration">
+        <OBJECT>
+          <ID name="locals" mc="Standard.Collaboration" uid="108c4c4d-c468-4f86-960d-f4a153184369"/>
+          <ATTRIBUTES>
+            <ATT name="IsConcurrent">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[locals]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Declared">
+              <OBJECT>
+                <ID name="Data Store" mc="Standard.BindableInstance" uid="9bb8cc71-5c2d-403d-ad42-9989ce5edbe3"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[Data Store]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Data Store" mc="Standard.BindableInstance" uid="3a624d3a-2a77-484d-8b82-cb4e80961aed"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[Data Store]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Data Store" mc="Standard.BindableInstance" uid="ab105aa1-01eb-4ed4-b7ad-c3ad02a22cb5"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[Data Store]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Data Store" mc="Standard.BindableInstance" uid="afdb3420-3549-4044-a7ac-32a790782e70"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[Data Store]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Data Store" mc="Standard.BindableInstance" uid="d2bd55b1-1ec3-440c-a00d-192215ffed04"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[Data Store]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Activity Activity diagram" mc="Standard.ActivityDiagram" uid="0cba1f50-6a5d-4b79-b018-2a1978e0a99d"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

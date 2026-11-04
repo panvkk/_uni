@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Diagram" version="4">
+  <OBJECT>
+    <ID name="Diagram" mc="Standard.Package" uid="5e12cfa5-5f17-450e-9294-2aca589a813e"/>
+    <PID name="project2" mc="Standard.Package" uid="31114db4-054e-412a-9942-22edc7e0382a"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Diagram]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Автор" mc="Standard.Actor" uid="9cf1ce5f-d0b0-4e79-b9e9-f8d8781dfe2d"/>
+        <COMPID name="Оператор системы" mc="Standard.Actor" uid="e3cc8e72-1aa4-4dc7-aaa8-f69a0bf20988"/>
+        <COMPID name="Импорт публикаций из BibTeX" mc="Standard.UseCase" uid="a0eae208-677c-4ac6-9d6c-2db058b39e60"/>
+        <COMPID name="Поиск и удаление дублей" mc="Standard.UseCase" uid="9a2a4e9c-85b1-4489-9c84-1210a9cddee3"/>
+        <COMPID name="Управление своими публикациями" mc="Standard.UseCase" uid="75516049-e9fd-4278-8fa6-a8bb0c572d50"/>
+        <COMPID name="Поиск и заявка на авторство" mc="Standard.UseCase" uid="b5afdec9-e220-4ed7-bee3-4a6f08f3df70"/>
+        <COMPID name="Импорт сведений о цитировании" mc="Standard.UseCase" uid="c09a5e8a-b594-400d-96e5-9f1bb99f9182"/>
+        <COMPID name="Аутентифиация пользователя" mc="Standard.UseCase" uid="872e3258-3e01-42f7-9e14-8569599b5f48"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Diagram Use Case diagram" mc="Standard.UseCaseDiagram" uid="1fb05796-c018-4013-9cd1-41ad70e80ca4"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
