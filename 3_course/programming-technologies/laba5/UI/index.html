@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="БиблиоСфера — поиск научных публикаций и управление профилями авторов">
-    <title>БиблиоСфера — библиографическая система</title>
+    <meta name="description" content="БиблиоСфера: поиск научных публикаций и управление профилями авторов">
+    <title>БиблиоСфера: библиографическая система</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,12 +23,13 @@
                 <a class="nav-link" href="#publications">Публикации</a>
                 <a class="nav-link" href="#authors">Авторы</a>
                 <a class="nav-link" href="#duplicates">Дубликаты <span class="nav-badge">12</span></a>
+                <a class="nav-link" href="#forms">Формы</a>
             </nav>
 
             <a class="profile-link" href="#profile">
                 <span class="avatar">КА</span>
                 <span class="profile-name">Константин</span>
-                <span class="chevron" aria-hidden="true">⌄</span>
+                <span class="chevron" aria-hidden="true">+</span>
             </a>
         </div>
     </header>
@@ -37,14 +38,13 @@
         <section class="hero-section">
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <p class="eyebrow">АИС «Библиографическая система»</p>
-                    <h1>Исследования,<br><em>которые связаны.</em></h1>
+                    <h1>Находите связь<br>между исследованиями.</h1>
                     <p class="hero-description">
                         Единое пространство для поиска научных публикаций,
                         анализа цитирования и управления профилями авторов.
                     </p>
                     <div class="hero-actions">
-                        <a class="button button-primary" href="#publications">Найти публикацию <span aria-hidden="true">→</span></a>
+                        <a class="button button-hero" href="#publications">Найти публикацию</a>
                         <a class="button button-quiet" href="#import">Импортировать .bib</a>
                     </div>
                 </div>
@@ -69,36 +69,35 @@
             <div class="container">
                 <div class="section-heading">
                     <div>
-                        <p class="eyebrow">Рабочая область</p>
                         <h2>Всё под контролем</h2>
                     </div>
-                    <a class="text-link" href="#duplicates">Открыть аналитику <span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="#duplicates">Открыть аналитику</a>
                 </div>
 
                 <div class="stat-grid" aria-label="Статистика системы">
                     <article class="stat-card">
-                        <div class="stat-icon blue" aria-hidden="true">◈</div>
+                        <div class="stat-icon" aria-hidden="true">01</div>
                         <p>Публикации в базе</p>
-                        <strong>24 860</strong>
-                        <span class="stat-trend positive">↑ 8,4% <small>за месяц</small></span>
+                        <strong>Каталог</strong>
+                        <span class="stat-trend">Поиск и просмотр</span>
                     </article>
                     <article class="stat-card">
-                        <div class="stat-icon orange" aria-hidden="true">◎</div>
+                        <div class="stat-icon" aria-hidden="true">02</div>
                         <p>Профили авторов</p>
-                        <strong>8 412</strong>
-                        <span class="stat-trend positive">↑ 3,1% <small>за месяц</small></span>
+                        <strong>Авторы</strong>
+                        <span class="stat-trend">Публикации и связи</span>
                     </article>
                     <article class="stat-card">
-                        <div class="stat-icon purple" aria-hidden="true">⌘</div>
+                        <div class="stat-icon" aria-hidden="true">03</div>
                         <p>Цитирования</p>
-                        <strong>61 209</strong>
-                        <span class="stat-trend positive">↑ 12,7% <small>за месяц</small></span>
+                        <strong>Аналитика</strong>
+                        <span class="stat-trend">Индекс цитирования</span>
                     </article>
                     <article class="stat-card alert-card">
-                        <div class="stat-icon red" aria-hidden="true">!</div>
+                        <div class="stat-icon" aria-hidden="true">04</div>
                         <p>На проверке</p>
-                        <strong>12</strong>
-                        <span class="stat-trend warning">Требуют внимания</span>
+                        <strong>Дубликаты</strong>
+                        <span class="stat-trend warning">Требуют решения</span>
                     </article>
                 </div>
 
@@ -106,44 +105,42 @@
                     <section class="panel publications-panel" id="publications">
                         <div class="panel-heading">
                             <div>
-                                <p class="eyebrow">Обновления</p>
                                 <h2>Последние публикации</h2>
                             </div>
-                            <a class="icon-link" href="#publications" aria-label="Открыть все публикации">↗</a>
+                            <a class="icon-link" href="#publications" aria-label="Открыть все публикации"><span aria-hidden="true">↗</span></a>
                         </div>
                         <div class="publication-list">
                             <article class="publication-item">
-                                <span class="publication-type">СТАТЬЯ</span>
+                                <span class="publication-type">Статья</span>
                                 <div class="publication-info">
                                     <h3>Графовые модели для анализа научных связей</h3>
-                                    <p>А. В. Морозов <span>·</span> 2026</p>
+                                    <p>А. В. Морозов, 2026</p>
                                 </div>
                                 <span class="publication-citations">48 <small>цит.</small></span>
                             </article>
                             <article class="publication-item">
-                                <span class="publication-type type-review">ОБЗОР</span>
+                                <span class="publication-type type-review">Обзор</span>
                                 <div class="publication-info">
                                     <h3>Методы дедупликации библиографических данных</h3>
-                                    <p>Е. К. Соколова <span>·</span> 2025</p>
+                                    <p>Е. К. Соколова, 2025</p>
                                 </div>
                                 <span class="publication-citations">32 <small>цит.</small></span>
                             </article>
                             <article class="publication-item">
-                                <span class="publication-type type-book">МОНОГРАФИЯ</span>
+                                <span class="publication-type type-book">Монография</span>
                                 <div class="publication-info">
                                     <h3>Цифровые библиотеки: от данных к знаниям</h3>
-                                    <p>И. П. Кузнецов <span>·</span> 2025</p>
+                                    <p>И. П. Кузнецов, 2025</p>
                                 </div>
                                 <span class="publication-citations">76 <small>цит.</small></span>
                             </article>
                         </div>
-                        <a class="panel-footer-link" href="#publications">Показать все публикации <span aria-hidden="true">→</span></a>
+                        <a class="panel-footer-link" href="#publications">Показать все публикации</a>
                     </section>
 
                     <aside class="panel search-panel" id="search">
                         <div class="panel-heading">
                             <div>
-                                <p class="eyebrow">Быстрый доступ</p>
                                 <h2>Поиск в базе</h2>
                             </div>
                             <span class="search-mark" aria-hidden="true">⌕</span>
@@ -152,7 +149,7 @@
                             <label for="search-query">Что вы ищете?</label>
                             <div class="search-input-wrap">
                                 <input id="search-query" name="query" type="search" placeholder="Название, автор, DOI..." required>
-                                <button type="submit" aria-label="Начать поиск">→</button>
+                                <button type="submit" aria-label="Начать поиск">Найти</button>
                             </div>
                         </form>
                         <div class="search-suggestions">
@@ -168,26 +165,25 @@
                     <section class="panel authors-panel" id="authors">
                         <div class="panel-heading">
                             <div>
-                                <p class="eyebrow">Сообщество</p>
                                 <h2>Популярные авторы</h2>
                             </div>
-                            <a class="text-link" href="#authors">Все авторы <span aria-hidden="true">↗</span></a>
+                            <a class="text-link" href="#authors">Все авторы</a>
                         </div>
                         <div class="author-list">
                             <a class="author-row" href="#authors">
                                 <span class="avatar avatar-large avatar-blue">АМ</span>
                                 <span><strong>Алексей Морозов</strong><small>12 публикаций</small></span>
-                                <span class="author-score">h <b>24</b></span>
+                                <span class="author-score">Открыть профиль</span>
                             </a>
                             <a class="author-row" href="#authors">
                                 <span class="avatar avatar-large avatar-orange">ЕС</span>
                                 <span><strong>Елена Соколова</strong><small>8 публикаций</small></span>
-                                <span class="author-score">h <b>19</b></span>
+                                <span class="author-score">Открыть профиль</span>
                             </a>
                             <a class="author-row" href="#authors">
                                 <span class="avatar avatar-large avatar-purple">ИК</span>
                                 <span><strong>Игорь Кузнецов</strong><small>21 публикация</small></span>
-                                <span class="author-score">h <b>17</b></span>
+                                <span class="author-score">Открыть профиль</span>
                             </a>
                         </div>
                     </section>
@@ -195,14 +191,13 @@
                     <section class="panel activity-panel" id="duplicates">
                         <div class="panel-heading">
                             <div>
-                                <p class="eyebrow">Состояние системы</p>
                                 <h2>Активность</h2>
                             </div>
-                            <span class="status-dot">В сети</span>
+                            <span class="status-label">Система онлайн</span>
                         </div>
                         <div class="activity-summary">
-                            <strong>1 284</strong>
-                            <span>операции за последние 30 дней</span>
+                            <strong>Последние действия</strong>
+                            <span>импорт, поиск и проверка записей</span>
                         </div>
                         <div class="chart" aria-label="График активности за последние 30 дней">
                             <span style="height: 34%"></span><span style="height: 47%"></span><span style="height: 42%"></span>
@@ -218,20 +213,222 @@
         </section>
 
         <section class="container import-section" id="import">
-            <div class="import-card">
+            <form class="import-card" action="#import" method="post" enctype="multipart/form-data">
                 <div>
-                    <p class="eyebrow">Новый импорт</p>
                     <h2>Добавьте публикации в систему</h2>
                     <p>Загрузите файл BibTeX, чтобы быстро пополнить базу и проверить записи на дубликаты.</p>
                 </div>
-                <a class="button button-dark" href="#import">Загрузить файл <span aria-hidden="true">↑</span></a>
+                <label class="file-button" for="bib-file">
+                    Выбрать файл
+                    <input id="bib-file" name="bib-file" type="file" accept=".bib,.bibtex" required>
+                </label>
+            </form>
+        </section>
+
+        <section class="container forms-section" id="forms">
+            <div class="section-heading">
+                <div>
+                    <h2>Формы и состояния</h2>
+                </div>
+            </div>
+
+            <div class="forms-grid">
+                <article class="panel form-card">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Вход в систему</h2>
+                        </div>
+                    </div>
+                    <form class="app-form" action="#profile" method="post">
+                        <label for="login-email">Электронная почта</label>
+                        <input id="login-email" name="email" type="email" placeholder="name@university.by" required>
+
+                        <label for="login-password">Пароль</label>
+                        <input id="login-password" name="password" type="password" placeholder="Введите пароль" minlength="6" required>
+
+                        <label class="check-label" for="remember-me">
+                            <input id="remember-me" name="remember" type="checkbox">
+                            Запомнить меня
+                        </label>
+
+                        <button class="button button-form form-submit" type="submit">Войти</button>
+                    </form>
+                </article>
+
+                <article class="panel form-card" id="publication-editor">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Публикация</h2>
+                        </div>
+                    </div>
+                    <form class="app-form" action="#publication-editor" method="post">
+                        <label for="publication-title">Название публикации</label>
+                        <input id="publication-title" name="title" type="text" value="Графовые модели для анализа научных связей" required>
+
+                        <div class="form-two-columns">
+                            <div>
+                                <label for="publication-author">Автор</label>
+                                <input id="publication-author" name="author" type="text" value="А. В. Морозов" required>
+                            </div>
+                            <div>
+                                <label for="publication-year">Год</label>
+                                <input id="publication-year" name="year" type="number" min="1900" max="2026" value="2026" required>
+                            </div>
+                        </div>
+
+                        <label for="publication-doi">DOI / ISSN</label>
+                        <input id="publication-doi" name="doi" type="text" placeholder="10.0000/example">
+
+                        <button class="button button-form form-submit" type="submit">Сохранить изменения</button>
+                    </form>
+                </article>
+
+                <article class="panel form-card">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Новая запись</h2>
+                        </div>
+                    </div>
+                    <form class="app-form" action="#forms" method="post">
+                        <label for="new-type">Тип публикации</label>
+                        <select id="new-type" name="type" required>
+                            <option value="">Выберите тип</option>
+                            <option>Статья</option>
+                            <option>Обзор</option>
+                            <option>Монография</option>
+                            <option>Конференционные материалы</option>
+                        </select>
+
+                        <label for="new-title">Название</label>
+                        <input id="new-title" name="title" type="text" placeholder="Введите название" required>
+
+                        <label for="new-authors">Авторы</label>
+                        <textarea id="new-authors" name="authors" rows="3" placeholder="Фамилия И. О., Фамилия И. О." required></textarea>
+
+                        <div class="form-actions">
+                            <button class="button button-form" type="submit">Добавить</button>
+                            <button class="button button-quiet" type="reset">Очистить</button>
+                        </div>
+                    </form>
+                </article>
+
+                <article class="panel form-card delete-card">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Подтверждение операции</h2>
+                        </div>
+                    </div>
+                    <form class="app-form" action="#duplicates" method="post">
+                        <p class="delete-warning">
+                            Вы действительно хотите удалить дубликат
+                            «Методы дедупликации библиографических данных»?
+                        </p>
+                        <label for="delete-reason">Причина удаления</label>
+                        <select id="delete-reason" name="reason" required>
+                            <option value="">Выберите причину</option>
+                            <option>Совпадение библиографической записи</option>
+                            <option>Некорректные данные</option>
+                            <option>Запись была удалена автором</option>
+                        </select>
+                        <div class="form-actions">
+                            <button class="button danger-button" type="submit">Удалить</button>
+                            <button class="button button-quiet" type="reset">Отмена</button>
+                        </div>
+                    </form>
+                </article>
+
+                <article class="panel form-card">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Расширенный поиск</h2>
+                        </div>
+                    </div>
+                    <form class="app-form" action="#publications" method="get">
+                        <label for="advanced-query">Ключевые слова</label>
+                        <input id="advanced-query" name="query" type="search" placeholder="Например, дедупликация">
+
+                        <div class="form-two-columns">
+                            <div>
+                                <label for="advanced-author">Автор</label>
+                                <input id="advanced-author" name="author" type="text" placeholder="Фамилия">
+                            </div>
+                            <div>
+                                <label for="advanced-year">Год</label>
+                                <input id="advanced-year" name="year" type="number" min="1900" max="2026" placeholder="2026">
+                            </div>
+                        </div>
+
+                        <label for="advanced-type">Тип документа</label>
+                        <select id="advanced-type" name="document-type">
+                            <option value="">Все типы</option>
+                            <option>Статья</option>
+                            <option>Обзор</option>
+                            <option>Монография</option>
+                        </select>
+
+                        <button class="button button-form form-submit" type="submit">Показать результаты</button>
+                    </form>
+                </article>
+
+                <article class="panel form-card" id="admin">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Пользователь</h2>
+                        </div>
+                    </div>
+                    <form class="app-form" action="#admin" method="post">
+                        <label for="admin-name">ФИО пользователя</label>
+                        <input id="admin-name" name="name" type="text" value="Константин Алексеевич Панов" required>
+
+                        <label for="admin-email">Учётная запись</label>
+                        <input id="admin-email" name="email" type="email" value="k.panov@bsu.by" required>
+
+                        <label for="admin-role">Роль</label>
+                        <select id="admin-role" name="role" required>
+                            <option selected>Оператор системы</option>
+                            <option>Автор</option>
+                            <option>Администратор</option>
+                            <option>Аудитор</option>
+                        </select>
+
+                        <label class="check-label" for="admin-active">
+                            <input id="admin-active" name="active" type="checkbox" checked>
+                            Учётная запись активна
+                        </label>
+
+                        <div class="form-actions">
+                            <button class="button button-form" type="submit">Сохранить</button>
+                            <button class="button button-quiet" type="reset">Сбросить</button>
+                        </div>
+                    </form>
+                </article>
+
+                <article class="panel form-card error-card" role="alert">
+                    <div class="panel-heading">
+                        <div>
+                            <h2>Операция не выполнена</h2>
+                        </div>
+                        <span class="error-code">Ошибка 404</span>
+                    </div>
+                    <form class="app-form" action="#top" method="get">
+                        <p class="error-message">
+                            Запрашиваемая публикация не найдена или была удалена из базы данных.
+                        </p>
+                        <label for="error-search">Поиск другой записи</label>
+                        <input id="error-search" name="query" type="search" placeholder="Название или DOI">
+                        <div class="form-actions">
+                            <button class="button button-form" type="submit">Найти</button>
+                            <a class="button button-quiet" href="#top">На главную</a>
+                        </div>
+                    </form>
+                </article>
             </div>
         </section>
     </main>
 
     <footer class="site-footer" id="profile">
         <div class="container footer-inner">
-            <p><strong>БиблиоСфера</strong> <span>·</span> АИС для исследователей</p>
+            <p><strong>БиблиоСфера</strong> <span>:</span> АИС для исследователей</p>
             <nav aria-label="Дополнительная навигация">
                 <a href="#top">Помощь</a>
                 <a href="#top">О системе</a>
